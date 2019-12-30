@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cardio_help/home.dart';
+import 'package:cardio_help/pages/HomePage/home.dart';
 
 void main() => runApp(MyApp());
 
