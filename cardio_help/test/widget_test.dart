@@ -27,4 +27,15 @@ void main() {
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
   });
+
+  
+  testWidgets('If our appBar was builded', (WidgetTester tester) async {
+    await tester.pumpWidget(MyApp());
+
+    //Verifica se as abas foram criadas
+    expect(find.text('Medicamentos'), findsOneWidget);
+    expect(find.text('Info'), findsOneWidget);    
+    print("-------------------------------- APROVADO");
+
+  });
 }
