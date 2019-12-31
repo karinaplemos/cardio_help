@@ -1,0 +1,186 @@
+{
+    "drugs" : [
+        {
+            "id": 1,
+            "name": "Atenolol",
+            "presentation": ["Comprimido de 25,50 ou 100 mg"],
+            "dilution": "Não se Aplica",
+            "indication": ["Angina", "Hipertensão Arterial"],
+            "routeAdm": ["Via Oral"],
+            "care":[
+                "Não administrar o medicamento diante de pulso radial menor 60 bpm, pois a medicação pode causar bradicardia",
+                "Monitorizar pressão arterial",
+                "Monitorizar a frequência cardíaca",
+                "Atentar a sinais gastrointestinais como náusea e vômitos",
+                "Avaliar nível de consciência, pois pode causar alteração do estado mental",
+                "Orientar o paciente quanto aos efeitos da medicação e efeitos adversos"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Amiodarona",
+            "presentation": ["Comprimidos de 100 e 200 mg", "Ampolas de 3ml com 50mg/ml"],
+            "dilution": "250 ml de SG 5%",
+            "indication": ["Arritmias ventriculares", "Arritmias supraventriculares"],
+            "routeAdm": ["Endovenosa", "Via Oral (Comprimido)"],
+            "care":[
+                "Avaliar rigorosamente frequência cardíaca",
+                "Atentar para alterações visuais",
+                "Observar padrão ventilatório e/ou doenças prévias pulmonares, pois o uso prolongado da amiodarona pode causar fibrose pulmonar",
+                "Avaliar pigmentação grisácea de face, pescoço e braços, ruch cutâneo é um possível efeito adverso",
+                "Avaliar estabilidade postural (pode causar tontura)",
+                "Registrar características da função gastrointestinal",
+                "Evitar exposição da medicação a luz, pois a medicacão tem sensibilidade a luz, e quando exposta forma cristas de amiodarona",
+                "Atentar a aceitação da dieta",
+                "Quando administrada em via periférica, atentar a permeabilidade do acesso e a sinais de flebite"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Anlodipino",
+            "presentation": ["Comprimidos de 5 e 10 mg"],
+            "dilution": "Não se aplica",
+            "indication": ["Angina", "Hipertensão Arterial"],
+            "routeAdm": ["Via Oral"],
+            "care":[
+                "Monitorizar pressão arterial",
+                "Observar sinais de congestão (edemas de mãos e pés e alteração da respiração e frequência cardíaca)",
+                "Atentar para tonturas e sonolência",
+                "Observar sinais de reações alérgicas como edema, prurido, hiperemia e calor",
+                "Observar parâmetro de frequência cardíaca",
+                "Orientar o paciente quanto aos efeito da medicação"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Captopril",
+            "presentation": ["Comprimidos de 12,5, 25a e 50mg"],
+            "dilution": "Não se aplica",
+            "indication": ["Hipertensão Arterial", "Adjuvante para IC"],
+            "routeAdm": ["Via Oral"],
+            "care":[
+                "Atentar para cefaleia ou hipotensão postural",
+                "Monitorizar regularmente a pressão arterial",
+                "Atentar para tosse seca",
+                "Atentar ao débito urinário e exames laboratoriais EAS e hemograma, pois a medicação pode desenvolver proteinúria e anemia",
+                "Monitorizar a frequência cardíaca, risco de arritmias por conta da hiperpotassemia",
+                "Pode causar desconforto torácico, atentar para os protocolos institucionais de dor torácica"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Clonidina",
+            "presentation": ["Comprimido 0,1, 0,15 e 0,20mg"],
+            "dilution": "SF 0,9%",
+            "indication": ["Hipertensão Arterial", "Analgésico de ação curta", "Potencializar o efeito anestésico"],
+            "routeAdm": ["Endovenosa", "Via Oral"],
+            "care":[
+                "Realizar controle da pressão arterial",
+                "Realizar controle da frequência cardíaca poderá provocar taquicardia ou bradicardia",
+                "Realizar hidratação oral, devido ao efeito de ressecamento na boca que a medicação pode causar",
+                "Avaliar nível de consciência devido ao efeito adverso de sedação",
+                "Avaliar aceitação da dieta, devido a inapetência",
+                "Atentar a função intestinal do paciente devido ao risco de constipação",
+                "Orientar o paciente quanto a hipotensão ortostática"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Dobutamina",
+            "presentation": ["Ampola 250mg"],
+            "dilution": "SF 0,9% ou SG 5%",
+            "indication": ["Insuficiência Cardíaca Aguda"],
+            "routeAdm": ["Endovenosa"],
+            "care":[
+                "Atentar para os valores de diluição mínima de 5mg/ml em soro fisiológico ou glicosado",
+                "Pode ser administrada em mesma via da dopamina, adrenalina, noradrenalina, lidocaína, vecurônio e atracúrio",
+                "Atentar para cefaleia tontura tremores e ansiedade possíveis efeitos adversos da medicação",
+                "Manter cliente em monitorização de pressão arterial e frequência cardíaca",
+                "Realizar eletrocardiograma em casos de alterações clínicas",
+                "Administração da medicação em bomba infusora",
+                "Atentar ao padrão ventilatório, devido a risco de dispneia",
+                "Atentar a sinais de náuseas",
+                "Caso a dobutamina não for diluída, a administração deve ser exclusivamente em acesso venoso central"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Losartana",
+            "presentation": ["Comprimidos 12,5, 25 e 50mg"],
+            "dilution": "Não se aplica",
+            "indication": ["Hipertensão Arterial"],
+            "routeAdm": ["Via Oral"],
+            "care":[
+                "Avaliar desequilíbrio hidroeletrolítico, pois tem maior risco de depleção de volume intravascular quando são administradas doses altas de diuréticos",
+                "Monitorar rigorosamente a pressão arterial",
+                "Avaliar padrão de sono do paciente",
+                "Monitorização de frequência cardíaca",
+                "Atentar alterações gastrointestinais",
+                "Orientar o paciente a não se levantar rápido devido ao risco de hipotensão ortostática",
+                "Avaliar sinais de desidratação devido a alteração hidroeletrolítica",
+                "Atentar ao uso em gestantes, pois existe o risco teratogênico",
+                "Atentar ao débito urinário"
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Nitroglicerina",
+            "presentation": ["Adesivo Transdérmico", "Solução Injetável"],
+            "dilution": "500 ml, SG 5% ou SF 0,9%, isentos de PVC",
+            "indication": ["Angina", "IC", "Hipertensão"],
+            "routeAdm": ["Endovenosa"],
+            "care":[
+                "Preparar em frascos de vidro ou frascos livres de PVC",
+                "Administrar a medicação em ambiente de unidade de terapia intensiva",
+                "Controlar rigorosamente a velocidade de infusão (usar bomba de infusão)",
+                "Realizar controle de sinais vitais pressão arterial e frequência cardíaca",
+                "Atentar para cefaleia, tonteira e fraquezas",
+                "Registrar alterações de coloração da pele (palidez)",
+                "Registrar alterações do tipo flebite, pois a medicação e pode causar irritação no local da infusão, caso a via de administração seja periférica",
+                "Atentar ao tempo de estabilidade do dripping de 24 em 24h"            
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Nitroprussiato de sódio",
+            "presentation": ["Ampola de 50mg"],
+            "dilution": "Diluente próprio para reconstituir. Depois de reconstituído deve ser diluído em SG 5% de 250 a 1000mL",
+            "indication": ["Crise hipertensiva"],
+            "routeAdm": ["Endovenosa"],
+            "care":[
+                "Administrar a medicação em ambiente de UTI",
+                "Controlar rigorosamente a velocidade de infusão usar bomba de infusão durante a administração",
+                "Tomar precaução para evitar o extravasamento, pois poderá causar irritação",
+                "Não associar a medicação com outro medicamento (via exclusiva de administração)",
+                "Proteger a medicação da luz e usar equipo fotossensível",
+                "Realizar controle rigoroso dos sinais vitais (pressão arterial e frequência cardíaca)",
+                "Realizar a troca da solução a cada 24 horas ou se apresentar alteração da coloração",
+                "Observar o nível de consciência após administração da medicação",
+                "Atentar para cefaleia, tonteira e fadiga",
+                "Atentar para sinais de alteração gastrointestinal (náuseas e vômito)"
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Noradrenalina",
+            "presentation": ["Ampolas de 4mg e 8mg"],
+            "dilution": "SG 5% 100 ml",
+            "indication": ["Controle da PA em casos de hipotensão aguda"],
+            "routeAdm": ["Endovenosa"],
+            "care":[
+                "Avaliar rigorosamente a pressão arterial",
+                "Administrar preferencialmente em via exclusiva e em bomba de infusão",
+                "Avaliar perfusão periférica regularmente, pois em doses elevadas pode causar hipoperfusão periférica grave",
+                "Observar e registrar a frequência cardíaca",
+                "Registrar traçado eletrocardiografico no momento da administração do fármaco",
+                "Observar tremores musculares",
+                "Administrar a medicação o mais proximal possível da inserção venosa, pois proporcionam uma rápida absorção consequentemente um tratamento melhor para o paciente",
+                "Registrar glicemia capilar e dosagens de hormônios tireoidianos, pois hiperglicemia e hipertireoidismo podem ser causadas pela terapêutica",
+                "Não administrar em via periférica, risco de necrose tissular",
+                "Atentar ao mcg/kg/min, risco de isquemia do órgãos em doses altas",
+                "Em doses acima de 10 ml/h de noradrenalina, avaliar o suporte nutricional e/ou suspenção da dieta enteral devido à instabilidade hemodinâmica",
+                "A administração deve ser feita por Bomba de infusão para obtenção de precisão do volume por hora que está sendo infundido"
+            ]
+        }
+    ]
+}
