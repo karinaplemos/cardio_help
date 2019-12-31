@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() {
-    return _HomeState();
-  }
+  _HomePageState createState() => _HomePageState();
 }
 
-class _HomeState extends State<Home> {
+class _HomePageState extends State<HomePage> {
+  List medimentos = ["ABC", "DEF", "KLM"];    //Lista de medicamentos
+  
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -25,7 +25,14 @@ class _HomeState extends State<Home> {
         ),
         body: TabBarView(
           children: [
-            Icon(Icons.local_hospital),
+            ListView.builder( //Gerador de itens da lista
+              itemBuilder: (context, index) => ListTile(
+                title: Text(medimentos[index]),
+                trailing: Icon(Icons.keyboard_arrow_right),
+                onTap: (){},
+              ),
+              itemCount: medimentos.length,
+            ),
             Icon(Icons.info),
           ],
         ),
