@@ -1,5 +1,4 @@
-{
-    "drugs" : [
+[
         {
             "id": 1,
             "name": "Atenolol",
@@ -182,5 +181,4 @@
                 "A administração deve ser feita por Bomba de infusão para obtenção de precisão do volume por hora que está sendo infundido"
             ]
         }
-    ]
-}
+]
