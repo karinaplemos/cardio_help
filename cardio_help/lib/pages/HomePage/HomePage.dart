@@ -26,7 +26,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    print(this.medicamentos);
     return DefaultTabController(
       length: 2,
       child : Scaffold(
