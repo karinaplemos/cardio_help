@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:cardio_help/objects/database.dart'; 
+import 'package:cardio_help/pages/DrugsPage/drugsPage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -6,10 +8,25 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List medimentos = ["ABC", "DEF", "KLM"];    //Lista de medicamentos
+  Database data = new Database();
+  List medicamentos;    //Lista de medicamentos
   
+  Future<void> load() async {
+    List l = await data.loadDrugsJsonData();
+    setState(() {
+      medicamentos = l;
+     });
+  }
+
+  void initState(){
+    this.load();
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    print(this.medicamentos);
     return DefaultTabController(
       length: 2,
       child : Scaffold(
@@ -27,11 +44,18 @@ class _HomePageState extends State<HomePage> {
           children: [
             ListView.builder( //Gerador de itens da lista
               itemBuilder: (context, index) => ListTile(
-                title: Text(medimentos[index]),
+                title: Text(medicamentos[index]["name"]),
                 trailing: Icon(Icons.keyboard_arrow_right),
-                onTap: (){},
+                onTap: (){
+
+                  Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (context) => DrugsPage(medicamento: medicamentos[index])
+                      )
+                  );
+                },
               ),
-              itemCount: medimentos.length,
+              itemCount: medicamentos.length,
             ),
             Icon(Icons.info),
           ],
