@@ -15,9 +15,6 @@ class DrugsPage extends StatefulWidget {
 }
 
 class _DrugsPageState extends State<DrugsPage> {
-  // widget.medicamento
-  List medimentos = ["ABC", "DEF", "KLM"];    //Lista de medicamentos
-
 
   @override
   Widget build(BuildContext context) {
