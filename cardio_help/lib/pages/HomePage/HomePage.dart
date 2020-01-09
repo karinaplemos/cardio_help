@@ -41,6 +41,7 @@ class _HomePageState extends State<HomePage> {
         ),
         body: TabBarView(
           children: [
+            (medicamentos != null)?
             ListView.builder( //Gerador de itens da lista
               itemBuilder: (context, index) => ListTile(
                 title: Text(medicamentos[index]["name"]),
@@ -55,6 +56,8 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
               itemCount: medicamentos.length,
+            ): Center(
+              child: CircularProgressIndicator(),
             ),
             Icon(Icons.info),
           ],
