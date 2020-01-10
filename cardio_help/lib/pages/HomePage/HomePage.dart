@@ -3,6 +3,10 @@ import 'package:cardio_help/objects/database.dart';
 import 'package:cardio_help/pages/DrugsPage/drugsPage.dart';
 
 class HomePage extends StatefulWidget {
+  final Color background;
+
+  const HomePage({Key key, @required this.background}) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -30,7 +34,7 @@ class _HomePageState extends State<HomePage> {
       length: 2,
       child : Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
+          backgroundColor: widget.background,
           title: Text('Cardio Help'),
           bottom: TabBar(
             tabs: [

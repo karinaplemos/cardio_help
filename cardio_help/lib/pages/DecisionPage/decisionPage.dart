@@ -57,7 +57,9 @@ class _DecisionPageState extends State<DecisionPage>{
                         onPressed: (){
                           Navigator.of(context).push(
                               MaterialPageRoute(
-                                  builder: (context) => HomePage()
+                                  builder: (context) => HomePage(
+                                    background: Color.fromRGBO(227, 62, 62, 1),
+                                  )
                               )
                           );
                         },
@@ -78,7 +80,9 @@ class _DecisionPageState extends State<DecisionPage>{
                         onPressed: (){
                           Navigator.of(context).push(
                               MaterialPageRoute(
-                                  builder: (context) => HomePage()
+                                  builder: (context) => HomePage(
+                                    background: Color.fromRGBO(176, 48, 48, 1),
+                                  )
                               )
                           );
                         },
