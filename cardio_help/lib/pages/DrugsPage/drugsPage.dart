@@ -3,11 +3,13 @@ import 'package:cardio_help/objects/custom_drawer/custom_navigator_drawer.dart';
 
 class DrugsPage extends StatefulWidget {
   final Map medicamento;
+  final Color backgroundColor;
 
   const DrugsPage(
     { 
       Key key,
-      @required this.medicamento
+      @required this.medicamento,
+      @required this.backgroundColor,
     }
   ): super(key: key); 
 
@@ -21,10 +23,12 @@ class _DrugsPageState extends State<DrugsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
+          backgroundColor: widget.backgroundColor,
           title: Text(widget.medicamento["name"]),
         ),
-        body: CollapsingNavigationDrawer()
+        body: CollapsingNavigationDrawer(
+          drawerBackgroundColor: widget.backgroundColor,
+        )
     );
   }
 }

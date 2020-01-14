@@ -8,8 +8,8 @@ class NavigationModel {
 }
 
 List<NavigationModel> navigationItems = [
-  NavigationModel(title: "Dashboard", icon: Icons.insert_chart),
-  NavigationModel(title: "Errors", icon: Icons.error),
-  NavigationModel(title: "Search", icon: Icons.search),
-  NavigationModel(title: "Notifications", icon: Icons.notifications),
+  NavigationModel(title: "Classificação", icon: Icons.format_list_bulleted),
+  NavigationModel(title: "Evento Adverso", icon: Icons.error),
+  NavigationModel(title: "Uso Terapêutico", icon: Icons.healing),
+  NavigationModel(title: "Interação", icon: Icons.notifications),
 ];

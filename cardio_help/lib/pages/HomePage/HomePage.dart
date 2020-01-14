@@ -50,7 +50,10 @@ class _HomePageState extends State<HomePage> {
 
                   Navigator.of(context).push(
                       MaterialPageRoute(
-                          builder: (context) => DrugsPage(medicamento: medicamentos[index])
+                          builder: (context) => DrugsPage(
+                            medicamento: medicamentos[index],
+                            backgroundColor: Colors.red,
+                          )
                       )
                   );
                 },

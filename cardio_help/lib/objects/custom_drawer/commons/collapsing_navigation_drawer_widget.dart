@@ -2,6 +2,15 @@ import 'package:cardio_help/objects/custom_drawer/custom_navigator_drawer.dart';
 import 'package:flutter/material.dart';
 
 class CollapsingNavigationDrawer extends StatefulWidget {
+  final Color drawerBackgroundColor;
+
+  const CollapsingNavigationDrawer(
+    { 
+      Key key,
+      @required this.drawerBackgroundColor
+    }
+  ): super(key: key); 
+
   @override
   CollapsingNavigationDrawerState createState() {
     return new CollapsingNavigationDrawerState();
@@ -10,7 +19,7 @@ class CollapsingNavigationDrawer extends StatefulWidget {
 
 class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
     with SingleTickerProviderStateMixin {
-  double maxWidth = 210;
+  double maxWidth = 300;
   double minWidth = 70;
   bool isCollapsed = true;
   AnimationController _animationController;
@@ -39,7 +48,7 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
       elevation: 80.0,
       child: Container(
         width: widthAnimation.value,
-        color: drawerBackgroundColor,
+        color: this.widget.drawerBackgroundColor,
         child: Column(
           children: <Widget>[
             Expanded(
