@@ -48,17 +48,18 @@ class _DecisionPageState extends State<DecisionPage>{
                           style: TextStyle(
                             color: Colors.white, 
                             fontSize: 25),
-                        ),
+                        ),//Color.fromRGBO(227, 62, 62, 1)
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
-                          side: BorderSide(color: Color.fromRGBO(227, 62, 62, 1))
+                          side: BorderSide(color: Color.fromRGBO(238, 100, 144, 0.93))
                         ),
-                        color: Color.fromRGBO(227, 62, 62, 1),
+                        color: Color.fromRGBO(238, 100, 144, 0.93),
                         onPressed: (){
                           Navigator.of(context).push(
                               MaterialPageRoute(
                                   builder: (context) => HomePage(
-                                    background: Color.fromRGBO(227, 62, 62, 1),
+                                    backgroundColor: Color.fromRGBO(238, 100, 144, 0.93),
+                                    flag: true,
                                   )
                               )
                           );
@@ -72,16 +73,17 @@ class _DecisionPageState extends State<DecisionPage>{
                         child: Text("Farmacêutico", 
                           style: TextStyle(color: Colors.white, fontSize: 22)
                         ),
-                        color: Color.fromRGBO(227, 62, 62, 1),
+                        color: Color.fromRGBO(184, 172, 40, 0.72),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
-                          side: BorderSide(color: Color.fromRGBO(227, 62, 62, 1))
+                          side: BorderSide(color: Color.fromRGBO(184, 172, 40, 0.72))
                         ),
                         onPressed: (){
                           Navigator.of(context).push(
                               MaterialPageRoute(
                                   builder: (context) => HomePage(
-                                    background: Color.fromRGBO(176, 48, 48, 1),
+                                    backgroundColor: Color.fromRGBO(184, 172, 40, 0.72),
+                                    flag: false,
                                   )
                               )
                           );
