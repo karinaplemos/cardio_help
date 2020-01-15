@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 
 class CollapsingNavigationDrawer extends StatefulWidget {
   final Color drawerBackgroundColor;
+  final bool flag;
 
   const CollapsingNavigationDrawer(
     { 
       Key key,
+      @required this.flag,
       @required this.drawerBackgroundColor
     }
   ): super(key: key); 
@@ -64,12 +66,12 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
                         });
                       },
                       isSelected: currentSelectedIndex == counter,
-                      title: navigationItems[counter].title,
-                      icon: navigationItems[counter].icon,
+                      title: (this.widget.flag)? itensNurse[counter].title : itensDruggist[counter].title,
+                      icon: (this.widget.flag)? itensNurse[counter].icon : itensDruggist[counter].icon ,
                       animationController: _animationController,
                   );
                 },
-                itemCount: navigationItems.length,
+                itemCount: (this.widget.flag)? itensNurse.length : itensDruggist.length,
               ),
             ),
             InkWell(

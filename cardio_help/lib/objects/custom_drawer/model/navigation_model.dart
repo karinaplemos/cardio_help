@@ -8,11 +8,17 @@ class NavigationModel {
 
   NavigationModel({this.title, this.icon});
 }
-
-  List<NavigationModel> navigationItems = [
+  // Lista de abas do Farmacêutico
+  List<NavigationModel> itensDruggist = [
     NavigationModel(title: "Classificação", icon: Icons.format_list_bulleted),
     NavigationModel(title: "Evento Adverso", icon: MyFlutterApp.interactive),
     NavigationModel(title: "Uso Terapêutico", icon: Icons.healing),
     NavigationModel(title: "Interação", icon: Attention.attention__1_),
+  ];
+
+  // Lista de abas do Enfermeiro
+  List<NavigationModel> itensNurse = [
+    NavigationModel(title: "Informações", icon: Icons.info_outline),
+    NavigationModel(title: "Cuidados", icon: Icons.healing),
   ];
 

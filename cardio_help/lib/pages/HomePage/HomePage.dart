@@ -53,6 +53,7 @@ class _HomePageState extends State<HomePage> {
                           builder: (context) => DrugsPage(
                             medicamento: medicamentos[index],
                             backgroundColor: Colors.red,
+                            flag: true,
                           )
                       )
                   );
