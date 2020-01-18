@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cardio_help/objects/custom_drawer/custom_navigator_drawer.dart';
+import 'package:cardio_help/objects/presentation.dart';
 
 class DrugsPage extends StatefulWidget {
   final Map medicamento;
@@ -28,9 +29,22 @@ class _DrugsPageState extends State<DrugsPage> {
           backgroundColor: widget.backgroundColor,
           title: Text(widget.medicamento["name"]),
         ),
-        body: CollapsingNavigationDrawer(
-          drawerBackgroundColor: widget.backgroundColor,
-          flag: this.widget.flag,
+        body: Stack(
+          children: <Widget>[  
+            
+            Container(
+              margin: EdgeInsets.only(left: 80),
+              
+              child: Presentation(
+                medicamento: widget.medicamento,
+              ),
+            ),
+            
+            CollapsingNavigationDrawer(
+              drawerBackgroundColor: widget.backgroundColor,
+              flag: this.widget.flag,
+            )
+          ]
         )
     );
   }
