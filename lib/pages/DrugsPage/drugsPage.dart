@@ -75,8 +75,9 @@ class _DrugsPageState extends State<DrugsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: widget.backgroundColor,
-          title: Text(widget.medicamento["name"]),
+          title: new Center(child: new Text(widget.medicamento["name"], textAlign: TextAlign.center)),
         ),
         body: Stack(
           children: <Widget>[  

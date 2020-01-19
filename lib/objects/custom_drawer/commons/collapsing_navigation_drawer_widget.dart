@@ -54,12 +54,23 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
         width: widthAnimation.value,
         color: this.widget.drawerBackgroundColor,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
+            CollapsingListTile(//Voltar para pagina anterior
+              title: 'Voltar', 
+             icon: Icons.arrow_back, 
+              animationController: _animationController, 
+              onTap:() {
+               Navigator.pop(context);
+              }
+            ),
+            Divider(color: Colors.grey, height: 20.0,),
             Expanded(
               child: ListView.separated(
                 separatorBuilder: (context, counter) {
-                  return Divider(height: 12.0);
+                  return Divider(height: 30.0);
                 },
+
                 itemBuilder: (context, counter) {
                   return CollapsingListTile(
                       onTap: () {
