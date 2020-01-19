@@ -1,5 +1,6 @@
 import 'package:cardio_help/objects/custom_drawer/custom_navigator_drawer.dart';
 import 'package:flutter/material.dart';
+import 'currentIndex.dart';
 
 class CollapsingNavigationDrawer extends StatefulWidget {
   final Color drawerBackgroundColor;
@@ -26,7 +27,8 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
   bool isCollapsed = true;
   AnimationController _animationController;
   Animation<double> widthAnimation;
-  int currentSelectedIndex = 0;
+ 
+
 
   @override
   void initState() {
