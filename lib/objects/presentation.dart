@@ -31,7 +31,8 @@ class _PresantationState extends State<Presentation>{
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: List.generate(widget.data["infos"].length, (index){
-                return Text(widget.data["infos"][index].toString(), 
+                String infoData = widget.data["infos"][index].toString();
+                return Text(removeBrackets(infoData), 
                 style: TextStyle(fontSize: 15.0));
               })
             )
@@ -40,6 +41,12 @@ class _PresantationState extends State<Presentation>{
       }
       
     );
+  }
+
+  String removeBrackets(String data){
+    String myString = data.replaceAll(']', '');
+    String newString = myString.replaceAll('[', '');
+    return newString;
   }
 }
 
