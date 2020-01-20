@@ -56,15 +56,21 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            CollapsingListTile(//Voltar para pagina anterior
-              title: 'Voltar', 
-             icon: Icons.arrow_back, 
-              animationController: _animationController, 
-              onTap:() {
-               Navigator.pop(context);
-              }
-            ),
-            Divider(color: Colors.grey, height: 20.0,),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: CollapsingListTile(//Voltar para pagina anterior
+                    title: 'Voltar', 
+                    icon: Icons.arrow_back, 
+                    animationController: _animationController, 
+                    onTap:() {
+                     Navigator.pop(context);
+                    }
+                  ),
+                )
+              ]
+            )
+            SizedBox(height: 20.0),
             Expanded(
               child: ListView.separated(
                 separatorBuilder: (context, counter) {
