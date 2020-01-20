@@ -54,7 +54,6 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
         width: widthAnimation.value,
         color: this.widget.drawerBackgroundColor,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Row(
               children: <Widget>[
@@ -69,7 +68,7 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
                   ),
                 )
               ]
-            )
+            ),
             SizedBox(height: 20.0),
             Expanded(
               child: ListView.separated(
