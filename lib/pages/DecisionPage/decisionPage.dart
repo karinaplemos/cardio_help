@@ -73,16 +73,16 @@ class _DecisionPageState extends State<DecisionPage>{
                         child: Text("Farmacêutico", 
                           style: TextStyle(color: Colors.white, fontSize: 22)
                         ),
-                        color: Color.fromRGBO(184, 172, 40, 0.72),
+                        color: Color.fromRGBO(158, 87, 19, 0.62),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
-                          side: BorderSide(color: Color.fromRGBO(184, 172, 40, 0.72))
+                          side: BorderSide(color: Color.fromRGBO(158, 87, 19, 0.62))
                         ),
                         onPressed: (){
                           Navigator.of(context).push(
                               MaterialPageRoute(
                                   builder: (context) => HomePage(
-                                    backgroundColor: Color.fromRGBO(184, 172, 40, 0.72),
+                                    backgroundColor: Color.fromRGBO(158, 87, 19, 0.62),
                                     flag: false,
                                   )
                               )

@@ -1,15 +1,18 @@
 import 'package:cardio_help/objects/custom_drawer/custom_navigator_drawer.dart';
 import 'package:flutter/material.dart';
+import '../../presentation.dart';
 import 'currentIndex.dart';
 
 class CollapsingNavigationDrawer extends StatefulWidget {
   final Color drawerBackgroundColor;
   final bool flag;
+  final Map medicamento;
 
   const CollapsingNavigationDrawer(
     { 
       Key key,
       @required this.flag,
+      @required this.medicamento,
       @required this.drawerBackgroundColor
     }
   ): super(key: key); 
@@ -28,7 +31,53 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
   AnimationController _animationController;
   Animation<double> widthAnimation;
  
+  Map getData(int index, bool flag){
+    Map data = {
+      "title": null,
+      "infos": null
+    };
 
+    if(flag){
+      if(index == 0){
+        data["title"] = ["Indicação","Apresentação","Diluição", "Rota de Administração"];
+        data["infos"] = [
+          this.widget.medicamento["indication"],
+          this.widget.medicamento["presentation"],
+          this.widget.medicamento["dilution"],
+          this.widget.medicamento["routeAdm"]
+        ];
+      }else if(index == 1){
+        data["title"] = ["Cuidados"];
+        data["infos"] = [
+          this.widget.medicamento["care"]
+        ];
+      }
+    }else{
+      if(index == 0){
+        data["title"] = ["Classificação"];
+        data["infos"] = [
+          this.widget.medicamento["classification"]
+        ];
+      }else if(index == 1){
+        data["title"] = ["Evento Adverso"];
+        data["infos"] = [
+          this.widget.medicamento["adverseReaction"]
+        ];
+      }else if(index == 2){
+        data["title"] = ["Uso Terapêutico"];
+        data["infos"] = [
+          this.widget.medicamento["therapeuticUse"]
+        ];
+      }else if(index == 3){
+        data["title"] = ["Interações Medicamentosas"];
+        data["infos"] = [
+          this.widget.medicamento["interactionMed"],
+          this.widget.medicamento["interactionEffectEffect"],
+        ];
+      }
+    }
+    return data;
+  }
 
   @override
   void initState() {
@@ -41,9 +90,23 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _animationController,
-      builder: (context, widget) => getWidget(context, widget),
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          Container(
+            margin: EdgeInsets.only(left: 80),
+            
+            child: Presentation(
+              data: this.getData(currentSelectedIndex, widget.flag),
+            ),
+          ),
+          AnimatedBuilder(
+            animation: _animationController,
+            builder: (context, widget) => getWidget(context, widget),
+          ),
+        ],
+      ),
+      
     );
   }
 
@@ -55,6 +118,7 @@ class CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
         color: this.widget.drawerBackgroundColor,
         child: Column(
           children: <Widget>[
+            SizedBox(height: 10.0),
             Row(
               children: <Widget>[
                 Expanded(
