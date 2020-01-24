@@ -3,14 +3,6 @@ import 'package:cardio_help/objects/database.dart';
 import 'package:cardio_help/pages/DrugsPage/drugsPage.dart';
 
 class HomePage extends StatefulWidget {
-  final Color backgroundColor;
-  final bool flag;
-
-  const HomePage({
-    Key key, 
-    @required this.backgroundColor,
-    @required this.flag,
-    }) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -18,6 +10,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Database data = new Database();
+  final Color backgroundColor = Colors.grey;
   List medicamentos;    //Lista de medicamentos
   
   Future<void> load() async {
@@ -39,7 +32,7 @@ class _HomePageState extends State<HomePage> {
       length: 2,
       child : Scaffold(
         appBar: AppBar(
-          backgroundColor: widget.backgroundColor,
+          backgroundColor: this.backgroundColor,
           title: Text('Cardio Help'),
           bottom: TabBar(
             tabs: [
@@ -61,8 +54,7 @@ class _HomePageState extends State<HomePage> {
                       MaterialPageRoute(
                           builder: (context) => DrugsPage(
                             medicamento: medicamentos[index],
-                            backgroundColor: widget.backgroundColor,
-                            flag: widget.flag,
+                            backgroundColor: this.backgroundColor,
                           )
                       )
                   );
