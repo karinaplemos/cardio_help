@@ -18,8 +18,8 @@
             "classification": "Os betabloqueadores podem ser diferenciados em três categorias de acordo com a seletividade. Os não seletivos, o qual o atenolol faz parte, bloqueiam tantos os receptores adrenérgicos β1, encontrados principalmente no miocárdio, quanto os β2, encontrados no músculo liso, nos pulmões, nos vasos sanguíneos e em outros órgãos. No sistema cardiovascular, eles inibem as respostas cronotrópicas, inotrópicas e vasoconstritoras à ação das catecolaminas epinefrina e norepinefrina nos receptores beta-adrenérgicos. Em consequência, apresentam efeitos periféricos mais acentuados como aumento da resistência arterial periférica (DANTAN e BRUTON, 2015).",
             "adverseReaction": "O bloqueio Beta pode causar ou agravar a insuficiência cardíaca em pacientes com insuficiência cardíaca compensada, infarto agudo do miocárdio ou cardiomegalia.  Uso de antagonistas de receptores beta-adrenérgicos é contra indicado em pacientes com asma,  DPOC, pois esse bloqueio pode resultar em broncoconstrição potencialmente fatal. Além disso pode causar bradicardia sinusal e choque cardiogênico (DANTAN e BRUTON, 2015).",
             "therapeuticUse": "Intensamente utilizados no tratamento da hipertensão, da angina e das síndromes coronarianas agudas,  bem como da insuficiência cardíaca congestiva.  esses fármacos também são utilizados com frequência no tratamento de arritmias supraventriculares e ventriculares (DANTAN e BRUNTON, 2015).",
-            "interactionMed": ["Anlodipino","Ampicilina"],
-            "interactionEffect": ["Aumento do efeito hipotensor do anlodipino e ocorrência de bradicardia.","Diminuição do efeito anti-hipertensivo do betabloqueador."]
+            "interactionMed": ["Anlodipino","Ampicilina","Atensina","Lidocaína","Noradrenalina"],
+            "interactionEffect": ["Aumento do efeito hipotensor do anlodipino e ocorrência de bradicardia.","Diminuição do efeito anti-hipertensivo do betabloqueador.","Aumento do efeito hipertensivo de rebote devido retirada abrupta de Clonidina.","Pode ocorrer sonolência, alterações do estado mental, bradicardia e hipotensão.", "Aumento do efeito vasopressórico da noradrenalina."]
         },
         {
             "id": 2,
@@ -87,7 +87,7 @@
             "adverseReaction": "Hipotensão; tosse (5 a 20% dos pacientes, os inibidores da ECA induzem tosse seca incômoda mediada pelo acúmulo de bradicinina); Hiperpotassemia (os inibidores da ECA podem causar hiperpotassemia pacientes com insuficiência renal ou diabetes, bem como naqueles em uso de diuréticos poupadores de potássio; insuficiência renal aguda (a inibição da ECA pode induzir insuficiência renal aguda em pacientes com estenose bilateral da artéria renal, estenose da artéria em um único remanescente, insuficiência cardíaca ou depressão de volume devido à diarreia ou diuréticos) (DANDAN e BRUNTON, 2015).", 
             "therapeuticUse": "Os fármacos que interferem no sistema renina-angiotensina desempenham um papel de destaque no tratamento da doença cardiovascular a principal causa de mortalidade nas sociedades modernas (DANDAN e BRUNTON, 2015).",
             "interactionMed": ["AAS, Antiácido","Espironolactona"," Insulina"],
-            "interactionEffect" : ["Diminuição da resposta anti-hipertensiva.","Aumento do efeito hipercalêmico dos IECA (Captopril/Enalapril).", "Aumento do efeito hipoglicimiante (cefaléia, tontura, sonolência náuseas, fome, tremores, fraqueza, sudorese, palpitações)."]
+            "interactionEffect" : ["Diminuição da resposta anti-hipertensiva.","Aumento do efeito hipercalemico dos IECA (Captopril/Enalapril).", "Aumento do efeito hipoglicimiante (cefaléia, tontura, sonolência náuseas, fome, tremores, fraqueza, sudorese, palpitações)."]
         },
         {
             "id": 5,
@@ -158,7 +158,7 @@
             "adverseReaction": "A incidência de angioedema e tosse com o seu uso é muito menor do que aquela observada com inibidores da ECA. Em são bem tolerados. Contudo, possuem potencial teratogênico e devem ser interrompido durante a gravidez. Em pacientes cuja pressão sanguínea ou função renal dependem muito do sistema renina angiotensina, podem provocar hipotensão, oliguria, azotemia progressiva, ou insuficiência renal aguda. Além disso, podem causar hiperpotassemia em pacientes com doença renal ou naqueles em o uso de suplementos de potássio ou diuréticos poupadores de potássio (DANDAN e BRUNTON, 2015).",
             "therapeuticUse": "A Losartana é aprovada para nefropatia diabética e para profilaxia do acidente vascular encefálico. Sua eficácia na redução da pressão arterial é comparável aquela dos inibidores da ECA e de outros anti-hipertensivos estabelecidos com perfil favorável de efeitos adversos (DANDAN e BRUNTON, 2015).",
             "interactionMed": ["Dipirona sódica","Espironolactona","Fluconazol"],
-            "interactionEffect":["Hipotensão e aumento do risco de problemas renais.","Hipercalêmia.","Hipotensão."]
+            "interactionEffect":["Hipotensão e aumento do risco de problemas renais.","Hipercalemia.","Hipotensão."]
             
         },
         {   
@@ -181,8 +181,8 @@
             "classification": "Faz parte dos nitratos orgânicos considerados agentes pró-fármacos que servem como fontes de óxido nítrico. Dilata preferencialmente mais as veias do que as arteríolas. Essa venodilatação diminui o retorno venoso, levando a uma redução no tamanho das câmaras ventriculares esquerda e direita e as pressões diastólicas finais, enquanto ocorre pouca alteração na resistência vascular sistêmica. A frequência cardíaca permanece inalterada ou pode sofrer ligeira elevação em resposta a uma redução da pressão arterial. A resistência vascular pulmonar e o débito cardíaco estão ligeiramente reduzidos. Em doses mais altas causam maior acúmulo venoso e também podem diminuir a resistência arteriolar, reduzindo, assim, a pressão arterial sistólica e diastólica, bem como débito cardíaco, com consequente palidez, Fraqueza, tontura e ativação dos reflexos simpáticos compensatórios (DANDAN e BRUNTON, 2015).",
             "adverseReaction": "A cefaleia é comum e pode ser intensa. Em geral diminui no decorrer de poucos dias se o tratamento for mantido e, com frequência, pode ser controlada com a diminuição da dose. Podem surgir episódios transitórios de tontura, fraqueza e outras manifestações associadas a hipotensão postural, particularmente se o paciente permanecer imóvel, podendo, em certas ocasiões, progredir para perda de consciência. (DANDAN e BRUNTON, 2015). Pode também ocorrer palidez cutâneo-mucosa, bradicardia e desconforto retroesternal (da SILVA, 2003).",
             "therapeuticUse": "Pode ser utilizada para o tratamento da angina, insuficiência cardíaca congestiva e infarto agudo do miocárdio, pois, esse fármaco reduz o consumo de O2 do miocárdio ao reduzir a pré-carga ventricular (DANDAN e BRUNTON, 2015).",
-            "interactionMed": ["Anlodipino"],
-            "interactionEffect":["Aumento do efeito hipotensor do Nitroprussiato."]
+            "interactionMed": ["Heparina"],
+            "interactionEffect":["Diminui o efeito anticoagulante da Heparina."]
             
         },
         {
