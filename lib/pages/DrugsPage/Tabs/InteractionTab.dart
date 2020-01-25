@@ -34,7 +34,7 @@ class _InteractionTabState extends State<InteractionTab>{
                     // Subtítulo
                     Container(
                       padding: EdgeInsets.only(left: 10),
-                      child: Text(widget.medicamento["interactionMed"][index-1].toString(),
+                      child: Text('\u2022 '+ widget.medicamento["interactionMed"][index-1].toString(),
                         style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)
                       ), 
                     ),

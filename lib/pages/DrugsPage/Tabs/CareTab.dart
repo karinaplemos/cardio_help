@@ -28,9 +28,9 @@ class _CareTabState extends State<CareTab>{
             // Lembrando que o índice é index - 1
             return Container(
                 padding: EdgeInsets.only(left: 16,top: 8, right: 5,bottom: 12),
-                child: Text(widget.medicamento["care"][index-1].toString(),
-                  style: TextStyle(fontSize: 18)
-                  ),
+                child: Text('\u2022 '+ widget.medicamento["care"][index-1].toString(),
+                  style: TextStyle(fontSize: 18),
+                ),   
               );
           }
         },
