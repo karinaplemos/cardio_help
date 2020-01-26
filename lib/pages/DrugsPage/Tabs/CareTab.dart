@@ -23,7 +23,7 @@ class _CareTabState extends State<CareTab>{
                 style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)
               ),
             );
-          }else{
+         }else{
             // Caso contrário, retorno a informação guardada pelo medicamento.
             // Lembrando que o índice é index - 1
             return Container(

@@ -1,6 +1,8 @@
 import 'package:cardio_help/objects/custom_drawer/custom_navigator_drawer.dart';
 import 'package:cardio_help/pages/DrugsPage/Tabs/CareTab.dart';
 import 'package:cardio_help/pages/DrugsPage/Tabs/InteractionTab.dart';
+import 'package:cardio_help/pages/DrugsPage/Tabs/ClassificationTab.dart';
+import 'package:cardio_help/pages/DrugsPage/Tabs/AdverseReaction.dart';
 import 'package:flutter/material.dart';
 
 
@@ -35,10 +37,10 @@ class _DrugsPageState extends State<DrugsPage>
   @override
   void initState() {
     this.tabs = [
-    Container(),                                  //Informações
-    CareTab(medicamento: widget.medicamento,),    //Cuidados
-    Container(),//Classificação
-    Container(),//Evento Adverso
+    Container(),                                            //Informações
+    CareTab(medicamento: widget.medicamento,),              //Cuidados
+    ClassificationTab(medicamento: widget.medicamento,),    //Classificação
+    AdverseReactionTab(medicamento: widget.medicamento,),   //Evento Adverso
     Container(),//Uso Terapêutico
     InteractionTab(medicamento: widget.medicamento,)//Interação
   ];
