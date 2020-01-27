@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ClassificationTab extends StatefulWidget{
+class AdverseReactionTab extends StatefulWidget{
   final Map medicamento;
 
-  const ClassificationTab  ({Key key, @required this.medicamento});
+  const AdverseReactionTab ({Key key, @required this.medicamento});
 
-  _ClassificationTabState createState() => _ClassificationTabState();    
+  _AdverseReactionTabState createState() => _AdverseReactionTabState();    
 }
-class _ClassificationTabState extends State<ClassificationTab>{
+class _AdverseReactionTabState extends State<AdverseReactionTab>{
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,13 +16,13 @@ class _ClassificationTabState extends State<ClassificationTab>{
         children: <Widget>[
           Container(
             padding: EdgeInsets.only(top: 12,bottom: 15),
-            child:Text("Classificação",
+            child:Text("Eventos Adversos",
             style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
           ),
           
           Container(
             padding: EdgeInsets.only(left: 16,top: 8, right: 5,bottom: 12),
-            child:Text(widget.medicamento["classification"].toString(),
+            child:Text(widget.medicamento["adverseReaction"].toString(),
             style: TextStyle(fontSize: 18))
           )
           

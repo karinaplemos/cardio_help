@@ -24,7 +24,7 @@
         {
             "id": 2,
             "name": "Amiodarona",
-            "presentation": ["Comprimidos de 100 e 200 mg", "Ampolas 50mg/ml 3ml"],
+            "presentation": ["Comprimidos de 100 e 200 mg", "Ampolas 50 mg/ml 3 ml"],
             "dilution": "SG 5% 250 ml",
             "indication": ["Arritmias ventriculares", "Arritmias supraventriculares"],
             "routeAdm": ["Endovenosa", "Via Oral"],
@@ -71,7 +71,7 @@
         {
             "id": 4,
             "name": "Captopril",
-            "presentation": ["Comprimidos de 12,5, 25 e 50mg"],
+            "presentation": ["Comprimidos de 12.5, 25 e 50mg"],
             "dilution": "Não se aplica",
             "indication": ["Hipertensão Arterial", "Adjuvante para IC"],
             "routeAdm": ["Via Oral","Sonda Nasoenteral (SNE)"],
@@ -92,7 +92,7 @@
         {
             "id": 5,
             "name": "Atensina/Clonidina",
-            "presentation": ["Comprimido 0,1, 0,15 e 0,20 mg", "Ampola de 1ml com 150mcg/ml"],
+            "presentation": ["Comprimido 0.1, 0.15 e 0.20 mg", "Ampola de 1 ml com 150 mcg/ml"],
             "dilution": "Solução Fisiológica 0,9% para diluição da ampola.",
             "indication": ["Hipertensão Arterial", "Analgésico de ação curta", "Potencializar o efeito anestésico"],
             "routeAdm": ["Endovenosa", "Via Oral", "Sonda Nasoenteral (SNE)"],
@@ -114,7 +114,7 @@
         {
             "id": 6,
             "name": "Dobutamina",
-            "presentation": ["Ampolas  de 20 ml com 250 mg (12,5 mg/ml)"],
+            "presentation": ["Ampolas de 20 ml com 250 mg (12.5 mg/ml)"],
             "dilution": "Solução fisiológica 0,9% ou glicosada 5%",
             "indication": ["Insuficiência Cardíaca Aguda"],
             "routeAdm": ["Endovenosa"],
@@ -138,7 +138,7 @@
         {
             "id": 7,
             "name": "Losartana Potássica",
-            "presentation": ["Comprimidos 50 e 100mg"],
+            "presentation": ["Comprimidos 50 ou 100 mg"],
             "dilution": "Não se aplica",
             "indication": ["Hipertensão Arterial"],
             "routeAdm": ["Via Oral", "Sonda Nasoenteral (SNE)"],
@@ -165,7 +165,7 @@
             "id": 8,
             "name": "Nitroglicerina",
             "presentation": ["Adesivo Transdérmico", "Solução Injetável de 25 mg em 5 ml ou 50 mg em 10 ml"],
-            "dilution": "SG 5% ou SF 0,9% (500 ml), isentos de PVC",
+            "dilution": "SG 5% ou SF 0.9% (500 ml), isentos de PVC",
             "indication": ["Angina", "IC", "Hipertensão"],
             "routeAdm": ["Endovenosa"],
             "care":[
@@ -188,7 +188,7 @@
         {
             "id": 9,
             "name": "Nitroprussiato de sódio",
-            "presentation": ["Ampola de 2ml com 25 mg/ml (50mg)"],
+            "presentation": ["Ampola de 2 ml com 25 mg/ml (50 mg)"],
             "dilution": "Diluente próprio para reconstituir. Depois de reconstituído deve ser diluído em SG 5% de 250 a 1000mL",
             "indication": ["Crise hipertensiva"],
             "routeAdm": ["Endovenosa"],
@@ -213,7 +213,7 @@
         {
             "id": 10,
             "name": "Noradrenalina",
-            "presentation": ["Ampolas de 4ml (8mg) e 8ml (16mg) (2mg/ml)"],
+            "presentation": ["Ampolas de 4 ml (8 mg) e 8 ml (16 mg) (2 mg/ml)"],
             "dilution": "Solução glicosada 5%",
             "indication": ["Controle da PA em casos de hipotensão aguda"],
             "routeAdm": ["Endovenosa"],
