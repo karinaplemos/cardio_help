@@ -1,10 +1,9 @@
 import 'package:cardio_help/pages/HomePage/HomePage.dart';
 import 'package:flutter/material.dart';
 
-
-void main(){
+void main(){   
   runApp(MaterialApp(
-    home: HomePage(),
-  ));
+    home: HomePage(), //Funcao para a chamada do aplicativo
+  )); 
 }
 

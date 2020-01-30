@@ -2,46 +2,45 @@ import 'package:flutter/material.dart';
 import 'package:cardio_help/objects/database.dart'; 
 import 'package:cardio_help/pages/DrugsPage/drugsPage.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatefulWidget { 
 
-  @override
+  @override  
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  Database data = new Database();
-  final Color backgroundColor = Colors.grey;
+class _HomePageState extends State<HomePage> { 
+  Database data = new Database();               
+  final Color backgroundColor = Colors.grey; 
   List medicamentos;    //Lista de medicamentos
   
-  Future<void> load() async {
-    List l = await data.loadDrugsJsonData();
-    setState(() {
-      medicamentos = l;
+  Future<void> load() async {             
+    List l = await data.loadDrugsJsonData(); // Uma funcao assincrona que aguarda a busca as informacoes na lista Drugs
+    setState(() {                           
+      medicamentos = l;   
      });
   }
 
-  void initState(){
+  void initState(){ 
     this.load();
-
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
+    return DefaultTabController( 
       length: 2,
       child : Scaffold(
-        appBar: AppBar(
+        appBar: AppBar(  
           backgroundColor: this.backgroundColor,
           title: Text('Cardio Help'),
-          bottom: TabBar(
+          bottom: TabBar( //Exibe as tabs da home 
             tabs: [
               Tab(text: 'Medicamentos'),
               Tab(text: 'Info'),
               ],
           ),
         ),
-        body: TabBarView(
+        body: TabBarView( 
           children: [
             (medicamentos != null)?
             ListView.builder( //Gerador de itens da lista

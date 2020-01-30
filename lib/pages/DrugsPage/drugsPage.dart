@@ -7,7 +7,6 @@ import 'package:cardio_help/pages/DrugsPage/Tabs/AdverseReactionTab.dart';
 import 'package:cardio_help/pages/DrugsPage/Tabs/TherapeuticUse.dart';
 import 'package:flutter/material.dart';
 
-
 class DrugsPage extends StatefulWidget {
   final Color backgroundColor;
   final Map medicamento;
@@ -30,14 +29,15 @@ class _DrugsPageState extends State<DrugsPage>
     with SingleTickerProviderStateMixin {
   double maxWidth = 300;
   double minWidth = 70;
-  bool isCollapsed = true;
-  AnimationController _animationController;
+  bool isCollapsed = true; 
+  AnimationController _animationController; 
   Animation<double> widthAnimation;
   int currentSelectedIndex = 0;
  
   List tabs;
   @override
   void initState() {
+    this.isCollapsed = true;
     this.tabs = [
     DetailsTab(medicamento: widget.medicamento,),           //Informações
     CareTab(medicamento: widget.medicamento,),              //Cuidados
@@ -46,11 +46,11 @@ class _DrugsPageState extends State<DrugsPage>
     TherapeuticUseTab(medicamento: widget.medicamento,),    //Uso Terapêutico
     InteractionTab(medicamento: widget.medicamento,)        //Interação
   ];
-    super.initState();
     _animationController = AnimationController(
         vsync: this, duration: Duration(milliseconds: 300));
     widthAnimation = Tween<double>(begin: maxWidth, end: minWidth)
         .animate(_animationController);
+    super.initState();
   }
 
   @override
@@ -64,10 +64,7 @@ class _DrugsPageState extends State<DrugsPage>
       body: Stack(
           children: <Widget>[
             
-            // Container(
-            //   margin: EdgeInsets.only(left: 80),  
-            //   child: this.tabs[currentSelectedIndex],
-            // ),
+            
             this.tabs[currentSelectedIndex],
             AnimatedBuilder(
               animation: _animationController,
@@ -92,7 +89,7 @@ class _DrugsPageState extends State<DrugsPage>
             Row(
               children: <Widget>[
                 Expanded(
-                  child: CollapsingListTile(//Voltar para pagina anterior
+                  child: CollapsingListTile( //Voltar para pagina anterior
                     title: 'Voltar', 
                     icon: Icons.arrow_back, 
                     animationController: _animationController, 
