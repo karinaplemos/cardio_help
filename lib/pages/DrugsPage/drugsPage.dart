@@ -29,7 +29,8 @@ class _DrugsPageState extends State<DrugsPage>
     with SingleTickerProviderStateMixin {
   double maxWidth = 300;
   double minWidth = 70;
-  bool isCollapsed = true; 
+  
+  bool isNotCollapsed = false;  // Variável de controle da execução da animação. No caso, se vai executar o foward ou reverse
   AnimationController _animationController; 
   Animation<double> widthAnimation;
   int currentSelectedIndex = 0;
@@ -37,7 +38,6 @@ class _DrugsPageState extends State<DrugsPage>
   List tabs; 
   @override
   void initState() {
-    this.isCollapsed = true;
     this.tabs = [
     DetailsTab(medicamento: widget.medicamento,),           //Informações
     CareTab(medicamento: widget.medicamento,),              //Cuidados
@@ -46,12 +46,13 @@ class _DrugsPageState extends State<DrugsPage>
     TherapeuticUseTab(medicamento: widget.medicamento,),    //Uso Terapêutico
     InteractionTab(medicamento: widget.medicamento,)        //Interação
   ];
+
+    super.initState();
     _animationController = AnimationController(
         vsync: this, duration: Duration(milliseconds: 300));
-    widthAnimation = Tween<double>(begin: maxWidth, end: minWidth)
+    widthAnimation = Tween<double>(begin: minWidth, end: maxWidth)
         .animate(_animationController);
     
-    super.initState();
   }
 
   @override
@@ -124,14 +125,14 @@ class _DrugsPageState extends State<DrugsPage>
             InkWell(
               onTap: () {
                 setState(() {
-                  isCollapsed = !isCollapsed;
-                  isCollapsed
+                  isNotCollapsed = !isNotCollapsed;
+                  isNotCollapsed
                       ? _animationController.forward()
                       : _animationController.reverse();
                 });
               },
               child: AnimatedIcon(
-                icon: AnimatedIcons.close_menu,
+                icon: AnimatedIcons.menu_close,
                 progress: _animationController,
                 color: selectedColor,
                 size: 50.0,

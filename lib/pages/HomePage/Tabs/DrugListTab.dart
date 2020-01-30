@@ -14,7 +14,6 @@ class DrugListTab extends StatefulWidget{
 class _DrugListTabState extends State<DrugListTab>{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return (widget.medicamentos != null)? // Enquanto a lista de medicamento for diferente de nulo
             ListView.builder( //Gerador de itens da lista
               itemBuilder: (context, index) => ListTile(

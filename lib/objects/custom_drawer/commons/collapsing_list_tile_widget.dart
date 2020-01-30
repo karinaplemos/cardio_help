@@ -26,10 +26,14 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
   @override
   void initState() { //Configuracoes da animacao do sidebar
     super.initState();
+    // widthAnimation =
+    //     Tween<double>(begin: 280, end: 70).animate(widget.animationController);
+    // sizedBoxAnimation =
+    //     Tween<double>(begin: 10, end: 0).animate(widget.animationController);
     widthAnimation =
-        Tween<double>(begin: 200, end: 70).animate(widget.animationController);
+        Tween<double>(begin: 70, end: 280).animate(widget.animationController);
     sizedBoxAnimation =
-        Tween<double>(begin: 10, end: 0).animate(widget.animationController);
+        Tween<double>(begin: 0, end: 10).animate(widget.animationController);
   }
 
   @override
