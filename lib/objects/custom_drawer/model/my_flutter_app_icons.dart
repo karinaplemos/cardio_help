@@ -18,7 +18,7 @@ import 'package:flutter/widgets.dart';
 class MyFlutterApp {
   MyFlutterApp._();
 
-  static const _kFontFam = 'MyFlutterApp';
+  static const _kFontFam = 'MyFlutterApp'; // Reconhece a fonte declarada no pubspec.yaml
 
-  static const IconData interactive = const IconData(0xe800, fontFamily: _kFontFam);
+  static const IconData interactive = const IconData(0xe800, fontFamily: _kFontFam); //Indica o icone da fonte que sera utilizada
 }

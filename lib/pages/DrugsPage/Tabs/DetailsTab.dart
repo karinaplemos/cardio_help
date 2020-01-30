@@ -27,16 +27,15 @@ class _DetailsTabState extends State<DetailsTab>{
 
 
   Widget _generateSubItems(String s, var l) => Column(
-      //shrinkWrap: true,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Container(
+        Container( //Define o titulo da pagina
           padding: EdgeInsets.only(left: 10),
           child: Text('\u2022 '+ s,
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)
           ), 
         ),
-        (s.toUpperCase().compareTo("DILUIÇÃO") != 0)? this._generateItems(l): Container(
+        (s.toUpperCase().compareTo("DILUIÇÃO") != 0)? this._generateItems(l): Container( //Separa os subitens
           padding: EdgeInsets.only(left: 16,top: 8, right: 5,bottom: 12),
           child:Text(l.toString(),
           style: TextStyle(fontSize: 18))
@@ -61,7 +60,7 @@ class _DetailsTabState extends State<DetailsTab>{
 
         this._generateSubItems("Apresentação", widget.medicamento["presentation"]),
 
-         this._generateSubItems("Diluição", widget.medicamento["dilution"]),
+        this._generateSubItems("Diluição", widget.medicamento["dilution"]),
         
       ],
     );

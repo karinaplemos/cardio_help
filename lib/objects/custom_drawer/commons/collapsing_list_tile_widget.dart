@@ -24,7 +24,7 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
   Animation<double> widthAnimation, sizedBoxAnimation;
 
   @override
-  void initState() {
+  void initState() { //Configuracoes da animacao do sidebar
     super.initState();
     widthAnimation =
         Tween<double>(begin: 200, end: 70).animate(widget.animationController);
@@ -34,7 +34,7 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return InkWell( //Layout do sidebar
       onTap: widget.onTap,
       child: Container(
         decoration: BoxDecoration(

@@ -7,9 +7,9 @@ import 'package:cardio_help/pages/DrugsPage/Tabs/AdverseReactionTab.dart';
 import 'package:cardio_help/pages/DrugsPage/Tabs/TherapeuticUse.dart';
 import 'package:flutter/material.dart';
 
-class DrugsPage extends StatefulWidget {
+class DrugsPage extends StatefulWidget { 
   final Color backgroundColor;
-  final Map medicamento;
+  final Map medicamento; //Medicamentos selecionado anteriormente
 
   const DrugsPage(
     { 
@@ -34,7 +34,7 @@ class _DrugsPageState extends State<DrugsPage>
   Animation<double> widthAnimation;
   int currentSelectedIndex = 0;
  
-  List tabs;
+  List tabs; 
   @override
   void initState() {
     this.isCollapsed = true;
@@ -50,6 +50,7 @@ class _DrugsPageState extends State<DrugsPage>
         vsync: this, duration: Duration(milliseconds: 300));
     widthAnimation = Tween<double>(begin: maxWidth, end: minWidth)
         .animate(_animationController);
+    
     super.initState();
   }
 
@@ -57,14 +58,13 @@ class _DrugsPageState extends State<DrugsPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          automaticallyImplyLeading: false,
+          automaticallyImplyLeading: false, //Retira a seta de voltar
           backgroundColor: widget.backgroundColor,
           title: new Center(child: new Text(widget.medicamento["name"], textAlign: TextAlign.center)),
-        ),
+      ),
+
       body: Stack(
-          children: <Widget>[
-            
-            
+          children: <Widget>[ //Cria a lista de topicos do medicamento
             this.tabs[currentSelectedIndex],
             AnimatedBuilder(
               animation: _animationController,
@@ -72,8 +72,6 @@ class _DrugsPageState extends State<DrugsPage>
             ),
           ],
         ),
-        
-      
     );
   }
 
@@ -108,7 +106,7 @@ class _DrugsPageState extends State<DrugsPage>
                 },
 
                 itemBuilder: (context, counter) {
-                  return CollapsingListTile(
+                  return CollapsingListTile( 
                       onTap: () {
                         setState(() {
                           currentSelectedIndex = counter;

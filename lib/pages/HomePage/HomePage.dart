@@ -1,6 +1,8 @@
+import 'package:cardio_help/pages/HomePage/Tabs/DrugListTab.dart';
+import 'package:cardio_help/pages/HomePage/Tabs/InfoTab.dart';
 import 'package:flutter/material.dart';
 import 'package:cardio_help/objects/database.dart'; 
-import 'package:cardio_help/pages/DrugsPage/drugsPage.dart';
+
 
 class HomePage extends StatefulWidget { 
 
@@ -10,7 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> { 
   Database data = new Database();               
-  final Color backgroundColor = Colors.grey; 
+  final Color backgroundColor = Color(0xFF236E4B);//Color(0xFF88C425); //Color(0xFF519548);
   List medicamentos;    //Lista de medicamentos
   
   Future<void> load() async {             
@@ -42,28 +44,10 @@ class _HomePageState extends State<HomePage> {
         ),
         body: TabBarView( 
           children: [
-            (medicamentos != null)?
-            ListView.builder( //Gerador de itens da lista
-              itemBuilder: (context, index) => ListTile(
-                title: Text(medicamentos[index]["name"]),
-                trailing: Icon(Icons.keyboard_arrow_right),
-                onTap: (){
-
-                  Navigator.of(context).push(
-                      MaterialPageRoute(
-                          builder: (context) => DrugsPage(
-                            medicamento: medicamentos[index],
-                            backgroundColor: this.backgroundColor,
-                          )
-                      )
-                  );
-                },
-              ),
-              itemCount: medicamentos.length,
-            ): Center(
-              child: CircularProgressIndicator(),
-            ),
-            Icon(Icons.info),
+            DrugListTab(
+              medicamentos: this.medicamentos,
+              backgroundColor: this.backgroundColor),
+            InfoTab(),
           ],
         ),
       ),
