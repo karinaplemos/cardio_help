@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
           title: Text('Cardio Help'),
           bottom: TabBar( //Exibe as tabs da home 
             labelColor: theme.selectedColor,
-            unselectedLabelColor: Colors.white12,
+            unselectedLabelColor: Colors.white70,
             indicatorColor: theme.selectedColor,
             tabs: [
               Tab(text: 'MEDICAMENTOS'),
