@@ -48,7 +48,6 @@ flutter:
     - assets/attention.png
     - assets/interactive.png
     - assets/interactive.svg
-    - assets/icon.png
     - lib/databases/drugs/drugs.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
