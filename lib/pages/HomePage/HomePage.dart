@@ -1,78 +1,56 @@
+import 'package:cardio_help/pages/HomePage/Tabs/DrugListTab.dart';
+import 'package:cardio_help/pages/HomePage/Tabs/InfoTab.dart';
 import 'package:flutter/material.dart';
 import 'package:cardio_help/objects/database.dart'; 
-import 'package:cardio_help/pages/DrugsPage/drugsPage.dart';
+import 'package:cardio_help/theme/theme.dart' as theme;
 
-class HomePage extends StatefulWidget {
-  final Color backgroundColor;
-  final bool flag;
 
-  const HomePage({
-    Key key, 
-    @required this.backgroundColor,
-    @required this.flag,
-    }) : super(key: key);
 
-  @override
+class HomePage extends StatefulWidget { 
+
+  @override  
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  Database data = new Database();
-  List medicamentos;    //Lista de medicamentos
+class _HomePageState extends State<HomePage> { 
+  Database data = new Database();               
   
-  Future<void> load() async {
-    List l = await data.loadDrugsJsonData();
-    setState(() {
-      medicamentos = l;
+  List drugs;    //Lista de medicamentos
+  
+  Future<void> load() async {             
+    List l = await data.loadDrugsJsonData(); // Uma funcao assincrona que aguarda a busca as informacoes na lista Drugs
+    setState(() {                           
+      drugs = l;   
      });
   }
 
-  void initState(){
+  void initState(){ 
     this.load();
-
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
+    return DefaultTabController( 
       length: 2,
       child : Scaffold(
-        appBar: AppBar(
-          backgroundColor: widget.backgroundColor,
+        appBar: AppBar(  
+          backgroundColor: theme.backgroundColor,
           title: Text('Cardio Help'),
-          bottom: TabBar(
+          bottom: TabBar( //Exibe as tabs da home 
+            labelColor: theme.selectedColor,
+            unselectedLabelColor: Colors.white12,
+            indicatorColor: theme.selectedColor,
             tabs: [
-              Tab(text: 'Medicamentos'),
-              Tab(text: 'Info'),
+              Tab(text: 'MEDICAMENTOS'),
+              Tab(text: 'INFO'),
               ],
           ),
         ),
-        body: TabBarView(
+        body: TabBarView( 
           children: [
-            (medicamentos != null)?
-            ListView.builder( //Gerador de itens da lista
-              itemBuilder: (context, index) => ListTile(
-                title: Text(medicamentos[index]["name"]),
-                trailing: Icon(Icons.keyboard_arrow_right),
-                onTap: (){
-
-                  Navigator.of(context).push(
-                      MaterialPageRoute(
-                          builder: (context) => DrugsPage(
-                            medicamento: medicamentos[index],
-                            backgroundColor: widget.backgroundColor,
-                            flag: widget.flag,
-                          )
-                      )
-                  );
-                },
-              ),
-              itemCount: medicamentos.length,
-            ): Center(
-              child: CircularProgressIndicator(),
-            ),
-            Icon(Icons.info),
+            DrugListTab(drugs: this.drugs),
+            InfoTab(),
           ],
         ),
       ),

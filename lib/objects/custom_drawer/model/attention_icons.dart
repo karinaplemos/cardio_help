@@ -18,7 +18,7 @@ import 'package:flutter/widgets.dart';
 class Attention {
   Attention._();
 
-  static const _pFontFam = 'Attention';
+  static const _pFontFam = 'Attention'; // Reconhece a fonte declarada no pubspec.yaml
 
-  static const IconData attention__1_ = const IconData(0xe803, fontFamily: _pFontFam);
+  static const IconData attention__1_ = const IconData(0xe803, fontFamily: _pFontFam); //Indica o icone da fonte que sera utilizada
 }

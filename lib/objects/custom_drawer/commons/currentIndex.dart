@@ -1,1 +1,0 @@
- int currentSelectedIndex = 0;
