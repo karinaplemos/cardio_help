@@ -22,8 +22,8 @@ class _InteractionTabState extends State<InteractionTab>{
                 // Se o index for 0 retorno o Título da página
                 return Container(
                   padding: theme.titleSpacing,
-                  child: Text("Interações drugsas",
-                    style: theme.titleStyle
+                  child: Text("Drogas de Interação e Efeitos",
+                    style: theme.titleStyle, textAlign: theme.justifyAlign
                   )
                 );                
               } else{
@@ -36,14 +36,14 @@ class _InteractionTabState extends State<InteractionTab>{
                     Container(
                       padding: theme.subtitleSpacing,
                       child: Text('\u2022 '+ widget.drug["interactionMed"][index-1].toString(),
-                        style: theme.subtitleStyle
+                        style: theme.subtitleStyle, textAlign: theme.justifyAlign
                       ), 
                     ),
                     // Texto
                     Container(
                       padding: theme.textSpacing,
                       child: Text(widget.drug["interactionEffect"][index-1].toString(),
-                        style: theme.textStyle
+                        style: theme.textStyle, textAlign: theme.justifyAlign
                       )
                     )
                   ],

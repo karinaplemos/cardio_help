@@ -21,7 +21,7 @@ class _CareTabState extends State<CareTab>{
             return Container(
               padding: theme.titleSpacing,
               child: Text("Cuidados",
-                style: theme.titleStyle
+                style: theme.titleStyle, textAlign: theme.justifyAlign
               ),
             );
          }else{
@@ -30,7 +30,7 @@ class _CareTabState extends State<CareTab>{
             return Container(
                 padding: theme.textSpacing,
                 child: Text('\u2022 '+ widget.drug["care"][index-1].toString(),
-                  style: theme.textStyle,
+                  style: theme.textStyle, textAlign: theme.justifyAlign
                 ),   
               );
           }

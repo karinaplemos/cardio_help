@@ -18,13 +18,13 @@ class _ClassificationTabState extends State<ClassificationTab>{
           Container(
             padding: theme.titleSpacing,
             child:Text("Classificação",
-            style: theme.titleStyle),
+            style: theme.titleStyle, textAlign: theme.justifyAlign),
           ),
           
           Container(
             padding: theme.textSpacing,
             child:Text(widget.drug["classification"].toString(),
-            style: theme.textStyle)
+            style: theme.textStyle, textAlign: theme.justifyAlign)
           )
           
           

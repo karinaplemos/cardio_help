@@ -18,13 +18,13 @@ class _AdverseReactionTabState extends State<AdverseReactionTab>{
           Container(
             padding: theme.titleSpacing,
             child:Text("Eventos Adversos",
-            style: theme.titleStyle),
+            style: theme.titleStyle, textAlign: theme.justifyAlign),
           ),
           
           Container(
             padding: theme.textSpacing,
             child:Text(widget.drug["adverseReaction"].toString(),
-            style: theme.textStyle)
+            style: theme.textStyle, textAlign: theme.justifyAlign)
           )
           
           

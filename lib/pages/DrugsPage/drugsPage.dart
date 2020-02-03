@@ -38,12 +38,12 @@ class _DrugsPageState extends State<DrugsPage>
   @override
   void initState() {
     this.tabs = [
-    DetailsTab(drug: widget.drug,),           //Informações
-    CareTab(drug: widget.drug,),              //Cuidados
-    ClassificationTab(drug: widget.drug,),    //Classificação
-    AdverseReactionTab(drug: widget.drug,),   //Evento Adverso
-    TherapeuticUseTab(drug: widget.drug,),    //Uso Terapêutico
-    InteractionTab(drug: widget.drug,)        //Interação
+      ClassificationTab(drug: widget.drug,),    //Classificação/Efeitos
+      TherapeuticUseTab(drug: widget.drug,),    //Uso Terapêutico
+      AdverseReactionTab(drug: widget.drug,),   //Evento Adverso
+      DetailsTab(drug: widget.drug,),           //Detalhes
+      InteractionTab(drug: widget.drug,),       //Interação
+      CareTab(drug: widget.drug,),              //Cuidados
   ];
 
     super.initState();

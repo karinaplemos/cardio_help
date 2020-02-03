@@ -11,12 +11,12 @@ class NavigationModel {
 }
   // Lista de abas dos detalhamentos dos medicamentos
   List<NavigationModel> itens = [
-    NavigationModel(title: "Informações", icon: Icons.info_outline),
-    NavigationModel(title: "Cuidados", icon: FontAwesomeIcons.medkit),
-    NavigationModel(title: "Classificação", icon: Icons.format_list_bulleted),
-    NavigationModel(title: "Evento Adverso", icon: MyFlutterApp.interactive),
+    NavigationModel(title: "Classificação/Efeitos", icon: Icons.format_list_bulleted),
     NavigationModel(title: "Uso Terapêutico", icon: Icons.healing),
-    NavigationModel(title: "Interação", icon: Attention.attention__1_),
+    NavigationModel(title: "Eventos Adversos", icon: Attention.attention__1_),
+    NavigationModel(title: "Detalhes", icon: Icons.info_outline),
+    NavigationModel(title: "Interação", icon: MyFlutterApp.interactive),
+    NavigationModel(title: "Cuidados", icon: FontAwesomeIcons.medkit),
   ];
 
 

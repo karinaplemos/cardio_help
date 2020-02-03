@@ -10,7 +10,7 @@ class _InfoTabState extends State<InfoTab>{
   Widget _createText(String string, TextStyle textStyle, EdgeInsetsGeometry padding){
     return Container(
       padding: padding,
-      child: Text(string, style: textStyle),
+      child: Text(string, style: textStyle, textAlign: theme.justifyAlign),
     );
   }
   @override

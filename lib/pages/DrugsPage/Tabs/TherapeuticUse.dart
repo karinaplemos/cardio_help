@@ -11,26 +11,23 @@ class TherapeuticUseTab extends StatefulWidget{
 class _TherapeuticUseTabState extends State<TherapeuticUseTab>{
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: theme.left80,
-      child:ListView(
+    return ListView(
+        padding: theme.left80,
         children: <Widget>[
           Container(
             padding: theme.titleSpacing,
             child:Text("Uso Terapêutico",
-            style: theme.titleStyle),
+            style: theme.titleStyle, textAlign: theme.justifyAlign),
           ),
           
           Container(
             padding: theme.textSpacing,
             child:Text(widget.drug["therapeuticUse"].toString(),
-            style: theme.textStyle)
+            style: theme.textStyle, textAlign: theme.justifyAlign)
           )
           
-          
         ],
-      )
-    );
+      );
   } 
 
 }

@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
             indicatorColor: theme.selectedColor,
             tabs: [
               Tab(text: 'MEDICAMENTOS'),
-              Tab(text: 'INFO'),
+              Tab(text: 'INFORMAÇÕES'),
               ],
           ),
         ),

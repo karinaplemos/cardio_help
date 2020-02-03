@@ -21,7 +21,7 @@ class _DetailsTabState extends State<DetailsTab>{
       return Container(
         padding: theme.textSpacing,
         child:Text(list[index].toString(),
-        style: theme.textStyle)
+        style: theme.textStyle, textAlign: theme.justifyAlign)
       );
     },
   );
@@ -33,13 +33,13 @@ class _DetailsTabState extends State<DetailsTab>{
         Container( //Define os subtitulos da pagina
           padding: theme.subtitleSpacing,
           child: Text('\u2022 '+ s,
-            style: theme.subtitleStyle
+            style: theme.subtitleStyle, textAlign: theme.justifyAlign
           ), 
         ),
         (s.toUpperCase().compareTo("DILUIÇÃO") != 0)? this._generateItems(l): Container( //Separa os subitens
           padding: theme.textSpacing,
           child:Text(l.toString(),
-          style: theme.textStyle)
+          style: theme.textStyle, textAlign: theme.justifyAlign)
         ),
       ],
     );
@@ -52,7 +52,7 @@ class _DetailsTabState extends State<DetailsTab>{
         Container(
           padding: theme.titleSpacing,
           child:Text("Detalhes",
-          style: theme.titleStyle),
+          style: theme.titleStyle, textAlign: theme.justifyAlign),
         ),
 
         this._generateSubItems("Indicação", widget.drug["indication"]),

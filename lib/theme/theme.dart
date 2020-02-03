@@ -7,7 +7,7 @@ Color selectedColor = Color(0xFF4AC8EA); //Cor das abas selecionadas
 // Cor de fundo do app
 final Color backgroundColor = Color(0xFF236E4B);
 
-final EdgeInsets left80 = EdgeInsets.only(left: 80);
+final EdgeInsets left80 = EdgeInsets.only(left: 80, right: 10);
 
 
 final TextStyle titleStyle = TextStyle(fontSize: 28, fontWeight: FontWeight.bold);
@@ -17,3 +17,5 @@ final TextStyle subtitleStyle = TextStyle(fontSize: 22, fontWeight: FontWeight.b
 final EdgeInsets titleSpacing = EdgeInsets.only(top: 12,bottom: 15);
 final EdgeInsets subtitleSpacing = EdgeInsets.only(left: 10);
 final EdgeInsets textSpacing = EdgeInsets.only(left: 16,top: 8, right: 5,bottom: 12);
+
+final TextAlign justifyAlign = TextAlign.justify;
