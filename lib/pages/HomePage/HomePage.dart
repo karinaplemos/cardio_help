@@ -2,6 +2,8 @@ import 'package:cardio_help/pages/HomePage/Tabs/DrugListTab.dart';
 import 'package:cardio_help/pages/HomePage/Tabs/InfoTab.dart';
 import 'package:flutter/material.dart';
 import 'package:cardio_help/objects/database.dart'; 
+import 'package:cardio_help/theme/theme.dart' as theme;
+
 
 
 class HomePage extends StatefulWidget { 
@@ -12,13 +14,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> { 
   Database data = new Database();               
-  final Color backgroundColor = Color(0xFF236E4B);//Color(0xFF88C425); //Color(0xFF519548);
-  List medicamentos;    //Lista de medicamentos
+  
+  List drugs;    //Lista de medicamentos
   
   Future<void> load() async {             
     List l = await data.loadDrugsJsonData(); // Uma funcao assincrona que aguarda a busca as informacoes na lista Drugs
     setState(() {                           
-      medicamentos = l;   
+      drugs = l;   
      });
   }
 
@@ -33,20 +35,21 @@ class _HomePageState extends State<HomePage> {
       length: 2,
       child : Scaffold(
         appBar: AppBar(  
-          backgroundColor: this.backgroundColor,
+          backgroundColor: theme.backgroundColor,
           title: Text('Cardio Help'),
           bottom: TabBar( //Exibe as tabs da home 
+            labelColor: theme.selectedColor,
+            unselectedLabelColor: Colors.white70,
+            indicatorColor: theme.selectedColor,
             tabs: [
-              Tab(text: 'Medicamentos'),
-              Tab(text: 'Info'),
+              Tab(text: 'MEDICAMENTOS'),
+              Tab(text: 'INFO'),
               ],
           ),
         ),
         body: TabBarView( 
           children: [
-            DrugListTab(
-              medicamentos: this.medicamentos,
-              backgroundColor: this.backgroundColor),
+            DrugListTab(drugs: this.drugs),
             InfoTab(),
           ],
         ),

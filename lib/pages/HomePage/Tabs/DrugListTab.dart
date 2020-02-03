@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:cardio_help/pages/DrugsPage/drugsPage.dart';
 
 class DrugListTab extends StatefulWidget{
-  final List medicamentos;
-  final Color backgroundColor;
+  final List drugs;
 
-  const DrugListTab({Key key, @required this.medicamentos, @required this.backgroundColor}) : super(key: key);
+  const DrugListTab({Key key, @required this.drugs}) : super(key: key);
   @override
   _DrugListTabState createState() => _DrugListTabState();
 
@@ -14,24 +13,23 @@ class DrugListTab extends StatefulWidget{
 class _DrugListTabState extends State<DrugListTab>{
   @override
   Widget build(BuildContext context) {
-    return (widget.medicamentos != null)? // Enquanto a lista de medicamento for diferente de nulo
+    return (widget.drugs != null)? // Enquanto a lista de drug for diferente de nulo
             ListView.builder( //Gerador de itens da lista
               itemBuilder: (context, index) => ListTile(
-                title: Text(widget.medicamentos[index]["name"]),
+                title: Text(widget.drugs[index]["name"]),
                 trailing: Icon(Icons.keyboard_arrow_right),
                 onTap: (){
 
                   Navigator.of(context).push(
                       MaterialPageRoute(
                           builder: (context) => DrugsPage( 
-                            medicamento: widget.medicamentos[index],
-                            backgroundColor: widget.backgroundColor,
+                            drug: widget.drugs[index]
                           )
                       )
                   );
                 },
               ),
-              itemCount: widget.medicamentos.length,
+              itemCount: widget.drugs.length,
             ): Center(
               child: CircularProgressIndicator(),
             );

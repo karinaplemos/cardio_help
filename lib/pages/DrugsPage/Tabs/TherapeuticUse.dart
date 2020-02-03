@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:cardio_help/theme/theme.dart' as theme;
 
 class TherapeuticUseTab extends StatefulWidget{
-  final Map medicamento;
+  final Map drug;
 
-  const TherapeuticUseTab ({Key key, @required this.medicamento});
+  const TherapeuticUseTab ({Key key, @required this.drug});
 
   _TherapeuticUseTabState createState() => _TherapeuticUseTabState();    
 }
@@ -11,19 +12,19 @@ class _TherapeuticUseTabState extends State<TherapeuticUseTab>{
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 80),
+      padding: theme.left80,
       child:ListView(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(top: 12,bottom: 15),
+            padding: theme.titleSpacing,
             child:Text("Uso Terapêutico",
-            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+            style: theme.titleStyle),
           ),
           
           Container(
-            padding: EdgeInsets.only(left: 16,top: 8, right: 5,bottom: 12),
-            child:Text(widget.medicamento["therapeuticUse"].toString(),
-            style: TextStyle(fontSize: 18))
+            padding: theme.textSpacing,
+            child:Text(widget.drug["therapeuticUse"].toString(),
+            style: theme.textStyle)
           )
           
           

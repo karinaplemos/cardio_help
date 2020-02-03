@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:cardio_help/theme/theme.dart' as theme;
 
 class DetailsTab extends StatefulWidget{
-  final Map medicamento;
+  final Map drug;
 
-  const DetailsTab({Key key, @required this.medicamento}) : super(key: key);
+  const DetailsTab({Key key, @required this.drug}) : super(key: key);
 
   @override
   _DetailsTabState createState() => _DetailsTabState();
@@ -18,9 +19,9 @@ class _DetailsTabState extends State<DetailsTab>{
     itemCount: list.length,
     itemBuilder: (context, index){
       return Container(
-        padding: EdgeInsets.only(left: 16,top: 8, right: 5,bottom: 12),
+        padding: theme.textSpacing,
         child:Text(list[index].toString(),
-        style: TextStyle(fontSize: 18))
+        style: theme.textStyle)
       );
     },
   );
@@ -29,16 +30,16 @@ class _DetailsTabState extends State<DetailsTab>{
   Widget _generateSubItems(String s, var l) => Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Container( //Define o titulo da pagina
-          padding: EdgeInsets.only(left: 10),
+        Container( //Define os subtitulos da pagina
+          padding: theme.subtitleSpacing,
           child: Text('\u2022 '+ s,
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)
+            style: theme.subtitleStyle
           ), 
         ),
         (s.toUpperCase().compareTo("DILUIÇÃO") != 0)? this._generateItems(l): Container( //Separa os subitens
-          padding: EdgeInsets.only(left: 16,top: 8, right: 5,bottom: 12),
+          padding: theme.textSpacing,
           child:Text(l.toString(),
-          style: TextStyle(fontSize: 18))
+          style: theme.textStyle)
         ),
       ],
     );
@@ -46,21 +47,21 @@ class _DetailsTabState extends State<DetailsTab>{
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.only(left: 80),
+      padding: theme.left80,
       children: <Widget>[
         Container(
-          padding: EdgeInsets.only(top: 12,bottom: 15),
+          padding: theme.titleSpacing,
           child:Text("Detalhes",
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+          style: theme.titleStyle),
         ),
 
-        this._generateSubItems("Indicação", widget.medicamento["indication"]),
+        this._generateSubItems("Indicação", widget.drug["indication"]),
 
-        this._generateSubItems("Via de Administração", widget.medicamento["routeAdm"]),
+        this._generateSubItems("Via de Administração", widget.drug["routeAdm"]),
 
-        this._generateSubItems("Apresentação", widget.medicamento["presentation"]),
+        this._generateSubItems("Apresentação", widget.drug["presentation"]),
 
-        this._generateSubItems("Diluição", widget.medicamento["dilution"]),
+        this._generateSubItems("Diluição", widget.drug["dilution"]),
         
       ],
     );

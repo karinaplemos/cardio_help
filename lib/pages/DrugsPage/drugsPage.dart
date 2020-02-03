@@ -6,16 +6,15 @@ import 'package:cardio_help/pages/DrugsPage/Tabs/ClassificationTab.dart';
 import 'package:cardio_help/pages/DrugsPage/Tabs/AdverseReactionTab.dart';
 import 'package:cardio_help/pages/DrugsPage/Tabs/TherapeuticUse.dart';
 import 'package:flutter/material.dart';
+import 'package:cardio_help/theme/theme.dart' as theme;
 
 class DrugsPage extends StatefulWidget { 
-  final Color backgroundColor;
-  final Map medicamento; //Medicamentos selecionado anteriormente
+  final Map drug; //drugs selecionado anteriormente
 
   const DrugsPage(
     { 
       Key key,
-      @required this.medicamento,
-      @required this.backgroundColor
+      @required this.drug,
     }
   ): super(key: key); 
 
@@ -39,12 +38,12 @@ class _DrugsPageState extends State<DrugsPage>
   @override
   void initState() {
     this.tabs = [
-    DetailsTab(medicamento: widget.medicamento,),           //Informações
-    CareTab(medicamento: widget.medicamento,),              //Cuidados
-    ClassificationTab(medicamento: widget.medicamento,),    //Classificação
-    AdverseReactionTab(medicamento: widget.medicamento,),   //Evento Adverso
-    TherapeuticUseTab(medicamento: widget.medicamento,),    //Uso Terapêutico
-    InteractionTab(medicamento: widget.medicamento,)        //Interação
+    DetailsTab(drug: widget.drug,),           //Informações
+    CareTab(drug: widget.drug,),              //Cuidados
+    ClassificationTab(drug: widget.drug,),    //Classificação
+    AdverseReactionTab(drug: widget.drug,),   //Evento Adverso
+    TherapeuticUseTab(drug: widget.drug,),    //Uso Terapêutico
+    InteractionTab(drug: widget.drug,)        //Interação
   ];
 
     super.initState();
@@ -60,12 +59,12 @@ class _DrugsPageState extends State<DrugsPage>
     return Scaffold(
       appBar: AppBar(
           automaticallyImplyLeading: false, //Retira a seta de voltar
-          backgroundColor: widget.backgroundColor,
-          title: new Center(child: new Text(widget.medicamento["name"], textAlign: TextAlign.center)),
+          backgroundColor: theme.backgroundColor,
+          title: new Center(child: new Text(widget.drug["name"], textAlign: TextAlign.center)),
       ),
 
       body: Stack(
-          children: <Widget>[ //Cria a lista de topicos do medicamento
+          children: <Widget>[ //Cria a lista de topicos do drug
             this.tabs[currentSelectedIndex],
             AnimatedBuilder(
               animation: _animationController,
@@ -81,7 +80,7 @@ class _DrugsPageState extends State<DrugsPage>
       elevation: 80.0,
       child: Container(
         width: widthAnimation.value,
-        color: this.widget.backgroundColor,
+        color: theme.backgroundColor,
         child: Column(
           children: <Widget>[
             SizedBox(height: 10.0),
@@ -134,7 +133,7 @@ class _DrugsPageState extends State<DrugsPage>
               child: AnimatedIcon(
                 icon: AnimatedIcons.menu_close,
                 progress: _animationController,
-                color: selectedColor,
+                color: theme.selectedColor,
                 size: 50.0,
               ),
             ),

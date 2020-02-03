@@ -1,6 +1,5 @@
-import 'package:cardio_help/objects/custom_drawer/custom_navigator_drawer.dart';
 import 'package:flutter/material.dart';
-import 'package:cardio_help/objects/custom_drawer/theme.dart';
+import 'package:cardio_help/theme/theme.dart' as theme;
 
 class CollapsingListTile extends StatefulWidget {
   final String title;
@@ -54,13 +53,13 @@ class _CollapsingListTileState extends State<CollapsingListTile> {
           children: <Widget>[
             Icon(
               widget.icon,
-              color: widget.isSelected ? selectedColor : Colors.white,
+              color: widget.isSelected ? theme.selectedColor : Colors.white,
               size: 38.0,
             ),
             SizedBox(width: sizedBoxAnimation.value),
             (widthAnimation.value >= 190)
                 ? Text(widget.title,
-                    style: listTitleDefaultTextStyle)
+                    style: theme.listTitleDefaultTextStyle)
                 : Container()
           ],
         ),

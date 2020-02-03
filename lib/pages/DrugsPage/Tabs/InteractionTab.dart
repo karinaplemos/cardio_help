@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:cardio_help/theme/theme.dart' as theme;
 
 class InteractionTab extends StatefulWidget{
-  final Map medicamento;
+  final Map drug;
 
-  const InteractionTab({Key key, @required this.medicamento}) : super(key: key);
+  const InteractionTab({Key key, @required this.drug}) : super(key: key);
 
   _InteractionTabState createState() => _InteractionTabState();
 
@@ -14,35 +15,35 @@ class _InteractionTabState extends State<InteractionTab>{
   Widget build(BuildContext context) {
     return 
           ListView.builder(
-            padding: EdgeInsets.only(left: 80),
-            itemCount: (widget.medicamento["interactionMed"].length + 1),
+            padding: theme.left80,
+            itemCount: (widget.drug["interactionMed"].length + 1),
             itemBuilder: (context, index){
               if(index == 0){
                 // Se o index for 0 retorno o Título da página
                 return Container(
-                  padding: EdgeInsets.only(top: 12, bottom: 15),
-                  child: Text("Interações Medicamentosas",
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)
+                  padding: theme.titleSpacing,
+                  child: Text("Interações drugsas",
+                    style: theme.titleStyle
                   )
                 );                
               } else{
-                // Caso contrário, retorno a informação guardada pelo medicamento.
+                // Caso contrário, retorno a informação guardada pelo drug.
                 // Lembrando que o índice é index - 1
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     // Subtítulo
                     Container(
-                      padding: EdgeInsets.only(left: 10),
-                      child: Text('\u2022 '+ widget.medicamento["interactionMed"][index-1].toString(),
-                        style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)
+                      padding: theme.subtitleSpacing,
+                      child: Text('\u2022 '+ widget.drug["interactionMed"][index-1].toString(),
+                        style: theme.subtitleStyle
                       ), 
                     ),
                     // Texto
                     Container(
-                      padding: EdgeInsets.only(left: 20,top: 8, right: 5,bottom: 12),
-                      child: Text(widget.medicamento["interactionEffect"][index-1].toString(),
-                        style: TextStyle(fontSize: 18)
+                      padding: theme.textSpacing,
+                      child: Text(widget.drug["interactionEffect"][index-1].toString(),
+                        style: theme.textStyle
                       )
                     )
                   ],
