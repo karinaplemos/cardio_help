@@ -12,7 +12,8 @@ class CareTab extends StatefulWidget{
 class _CareTabState extends State<CareTab>{
   @override
   Widget build(BuildContext context){  
-    return ListView.builder(
+    return Scaffold(
+      body:ListView.builder(
         padding: theme.left80,                 // Espaço necessário por causa das abas verticais
         itemCount: (widget.drug["care"].length + 1), // Acrescento +1 por causa do título
         itemBuilder: (context, index){
@@ -35,7 +36,7 @@ class _CareTabState extends State<CareTab>{
               );
           }
         },
-      );
+      ));
   }
 }
 

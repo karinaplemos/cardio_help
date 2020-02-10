@@ -11,7 +11,9 @@ class TherapeuticUseTab extends StatefulWidget{
 class _TherapeuticUseTabState extends State<TherapeuticUseTab>{
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return 
+      Scaffold(
+        body: ListView(
         padding: theme.left80,
         children: <Widget>[
           Container(
@@ -25,8 +27,7 @@ class _TherapeuticUseTabState extends State<TherapeuticUseTab>{
             child:Text(widget.drug["therapeuticUse"].toString(),
             style: theme.textStyle, textAlign: theme.justifyAlign)
           )
-          
-        ],
+        ]),
       );
   } 
 

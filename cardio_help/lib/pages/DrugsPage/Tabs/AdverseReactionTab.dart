@@ -11,9 +11,10 @@ class AdverseReactionTab extends StatefulWidget{
 class _AdverseReactionTabState extends State<AdverseReactionTab>{
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: theme.left80,
-      child:ListView(
+    return Scaffold(
+      body:Container(
+        padding: theme.left80,
+        child:ListView(
         children: <Widget>[
           Container(
             padding: theme.titleSpacing,
@@ -26,10 +27,9 @@ class _AdverseReactionTabState extends State<AdverseReactionTab>{
             child:Text(widget.drug["adverseReaction"].toString(),
             style: theme.textStyle, textAlign: theme.justifyAlign)
           )
-          
-          
         ],
       )
+    ),
     );
   } 
 

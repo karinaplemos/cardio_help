@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:cardio_help/pages/DrugsPage/Tabs/CareTab.dart';
+import 'package:cardio_help/pages/DrugsPage/Tabs/DetailsTab.dart';
+import 'package:cardio_help/pages/DrugsPage/Tabs/InteractionTab.dart';
+import 'package:cardio_help/pages/DrugsPage/Tabs/ClassificationTab.dart';
+import 'package:cardio_help/pages/DrugsPage/Tabs/AdverseReactionTab.dart';
+import 'package:cardio_help/pages/DrugsPage/Tabs/TherapeuticUse.dart';
 
 class DrugsPage extends StatefulWidget {
   final Map medicamento;
@@ -16,6 +22,21 @@ class DrugsPage extends StatefulWidget {
 
 class _DrugsPageState extends State<DrugsPage> {
   List topicos = ['Classificação/Efeitos','Uso Terapêutico','Eventos Adversos', 'Detalhes', 'Interação Medicamentosa','Cuidados'];
+  List tabs; 
+
+  @override
+  void initState() {
+    this.tabs = [
+      ClassificationTab(drug: widget.medicamento,),    //Classificação/Efeitos
+      TherapeuticUseTab(drug: widget.medicamento,),    //Uso Terapêutico
+      AdverseReactionTab(drug: widget.medicamento,),   //Evento Adverso
+      DetailsTab(drug: widget.medicamento,),           //Detalhes
+      InteractionTab(drug: widget.medicamento,),       //Interação
+      CareTab(drug: widget.medicamento,),              //Cuidados
+  ];
+
+  super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +45,28 @@ class _DrugsPageState extends State<DrugsPage> {
           backgroundColor: Colors.red,
           title: Text(widget.medicamento["name"]),
         ),
-        body:  GridView.count(
+        body: GridView.count(
+        crossAxisCount: 2,
+        padding: const EdgeInsets.all(20),
+        crossAxisSpacing: 15,
+        mainAxisSpacing: 15,
+        children: List.generate(topicos.length, (currentSelectedIndex) {
+            return RaisedButton(
+              onPressed: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => tabs[currentSelectedIndex],
+                      )
+                  );
+              },
+              padding: const EdgeInsets.all(8),
+              child: Text(topicos[currentSelectedIndex]),
+              color: Colors.teal[100],
+                );
+          }),
+        ),
+/*        )
+         GridView.count(
             primary: false,
             padding: const EdgeInsets.all(20),
             crossAxisSpacing: 15,
@@ -80,7 +122,8 @@ class _DrugsPageState extends State<DrugsPage> {
                   color: Colors.teal[600],
                 ),
             ],
-      ),
+      ), 
+      */
 
         //        Text("Diluição"),
         //        Text(widget.medicamento["dilution"]),
@@ -98,9 +141,4 @@ class _DrugsPageState extends State<DrugsPage> {
             //    )          
   );   
   }
-
-  returnWidget( ){
-
-  }
-
 }

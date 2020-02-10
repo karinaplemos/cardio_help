@@ -13,7 +13,8 @@ class InteractionTab extends StatefulWidget{
 class _InteractionTabState extends State<InteractionTab>{
   @override
   Widget build(BuildContext context) {
-    return 
+    return Scaffold(
+      body:
           ListView.builder(
             padding: theme.left80,
             itemCount: (widget.drug["interactionMed"].length + 1),
@@ -50,7 +51,7 @@ class _InteractionTabState extends State<InteractionTab>{
                 );
               }         
             },
-          );
+          ));
         
     
   }

@@ -11,7 +11,8 @@ class ClassificationTab extends StatefulWidget{
 class _ClassificationTabState extends State<ClassificationTab>{
   @override
   Widget build(BuildContext context) {
-    return Container(
+      return Scaffold(
+      body:Container(
       padding: theme.left80,
       child:ListView(
         children: <Widget>[
@@ -30,6 +31,7 @@ class _ClassificationTabState extends State<ClassificationTab>{
           
           ],
       )
+    ),
     );
   } 
 
