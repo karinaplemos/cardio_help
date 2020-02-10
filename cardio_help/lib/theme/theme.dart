@@ -7,7 +7,7 @@ Color selectedColor = Color(0xFF4AC8EA); //Cor das abas selecionadas
 // Cor de fundo do app
 final Color backgroundColor = Color(0xFF236E4B);
 
-final EdgeInsets padding = EdgeInsets.all(10);
+final EdgeInsets padding = EdgeInsets.all(20);
 
 
 final TextStyle titleStyle = TextStyle(fontSize: 28, fontWeight: FontWeight.bold);
@@ -15,7 +15,7 @@ final TextStyle textStyle = TextStyle(fontSize: 18);
 final TextStyle subtitleStyle = TextStyle(fontSize: 22, fontWeight: FontWeight.bold);
 final TextStyle textButtonStyle = TextStyle(fontSize: 17);
 
-final EdgeInsets titleSpacing = EdgeInsets.only(top: 12,bottom: 15);
+final EdgeInsets titleSpacing = EdgeInsets.only(bottom: 15);
 final EdgeInsets subtitleSpacing = EdgeInsets.only(left: 10);
 final EdgeInsets textSpacing = EdgeInsets.only(left: 16,top: 8, right: 5,bottom: 12);
 

@@ -60,11 +60,15 @@ class _DrugsPageState extends State<DrugsPage> {
                         )
                     );
                 },
+                shape: RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(18.0),
+                        
+                ),
                 padding: const EdgeInsets.all(8),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      Icon(itens[currentSelectedIndex].icon, size: 60),
+                      Icon(itens[currentSelectedIndex].icon, size: 60, color: itens[currentSelectedIndex].color),
                       Text(itens[currentSelectedIndex].title, style: theme.textButtonStyle, textAlign: theme.centerAlign),
                     ]
                   ),
