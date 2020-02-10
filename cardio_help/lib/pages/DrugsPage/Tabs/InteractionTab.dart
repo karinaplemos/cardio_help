@@ -17,6 +17,7 @@ class _InteractionTabState extends State<InteractionTab>{
       appBar: AppBar(
         backgroundColor: theme.backgroundColor,
         title: Text(widget.drug["name"]),
+        centerTitle: true,
       ),
       body:
           ListView.builder(

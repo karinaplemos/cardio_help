@@ -16,6 +16,7 @@ class _CareTabState extends State<CareTab>{
       appBar: AppBar(
         backgroundColor: theme.backgroundColor,
         title: Text(widget.drug["name"]),
+        centerTitle: true,
       ),
       body:ListView.builder(
         padding: theme.padding,                

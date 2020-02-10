@@ -45,6 +45,7 @@ class _DrugsPageState extends State<DrugsPage> {
         appBar: AppBar(
           backgroundColor: theme.backgroundColor,
           title: Text(widget.drug["name"]),
+          centerTitle: true,
         ),
         body: GridView.count(
           crossAxisCount: 2,
@@ -65,10 +66,11 @@ class _DrugsPageState extends State<DrugsPage> {
                         
                 ),
                 padding: const EdgeInsets.all(8),
-                child: Column(
+                child: Flex(
+                    direction: Axis.vertical,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      Icon(itens[currentSelectedIndex].icon, size: 60, color: itens[currentSelectedIndex].color),
+                      Icon(itens[currentSelectedIndex].icon, size: 50, color: itens[currentSelectedIndex].color),
                       Text(itens[currentSelectedIndex].title, style: theme.textButtonStyle, textAlign: theme.centerAlign),
                     ]
                   ),

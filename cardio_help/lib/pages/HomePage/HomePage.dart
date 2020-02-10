@@ -1,3 +1,5 @@
+import 'package:cardio_help/pages/HomePage/Tabs/DrugListTab.dart';
+import 'package:cardio_help/pages/HomePage/Tabs/InfoTab.dart';
 import 'package:flutter/material.dart';
 import 'package:cardio_help/objects/database.dart'; 
 import 'package:cardio_help/pages/DrugsPage/drugsPage.dart';
@@ -43,24 +45,10 @@ class _HomePageState extends State<HomePage> {
         body: TabBarView(
           children: [
             (this.drugs != null)?
-            ListView.builder( //Gerador de itens da lista
-              itemBuilder: (context, index) => ListTile(
-                title: Text(this.drugs[index]["name"]),
-                trailing: Icon(Icons.keyboard_arrow_right),
-                onTap: (){
-
-                  Navigator.of(context).push(
-                      MaterialPageRoute(
-                          builder: (context) => DrugsPage(drug: this.drugs[index])
-                      )
-                  );
-                },
-              ),
-              itemCount: this.drugs.length,
-            ): Center(
+            DrugListTab(drugs: this.drugs): Center(
               child: CircularProgressIndicator(),
             ),
-            Icon(Icons.info),
+            InfoTab()
           ],
         ),
       ),

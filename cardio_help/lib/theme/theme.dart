@@ -13,7 +13,7 @@ final EdgeInsets padding = EdgeInsets.all(20);
 final TextStyle titleStyle = TextStyle(fontSize: 28, fontWeight: FontWeight.bold);
 final TextStyle textStyle = TextStyle(fontSize: 18);
 final TextStyle subtitleStyle = TextStyle(fontSize: 22, fontWeight: FontWeight.bold);
-final TextStyle textButtonStyle = TextStyle(fontSize: 17);
+final TextStyle textButtonStyle = TextStyle(fontSize: 14);
 
 final EdgeInsets titleSpacing = EdgeInsets.only(bottom: 15);
 final EdgeInsets subtitleSpacing = EdgeInsets.only(left: 10);

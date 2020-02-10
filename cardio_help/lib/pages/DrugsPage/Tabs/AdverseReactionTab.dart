@@ -15,6 +15,7 @@ class _AdverseReactionTabState extends State<AdverseReactionTab>{
       appBar: AppBar(
         backgroundColor: theme.backgroundColor,
         title: Text(widget.drug["name"]),
+        centerTitle: true,
       ),
       body:Container(
         padding: theme.padding,

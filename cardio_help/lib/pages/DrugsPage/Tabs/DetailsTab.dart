@@ -48,6 +48,7 @@ class _DetailsTabState extends State<DetailsTab> {
       appBar: AppBar(
         backgroundColor: theme.backgroundColor,
         title: Text(widget.drug["name"]),
+        centerTitle: true,
       ),
       body:ListView(
         padding: theme.padding,
