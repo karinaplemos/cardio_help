@@ -20,7 +20,7 @@ class _InteractionTabState extends State<InteractionTab>{
       ),
       body:
           ListView.builder(
-            padding: theme.left80,
+            padding: theme.padding,
             itemCount: (widget.drug["interactionMed"].length + 1),
             itemBuilder: (context, index){
               if(index == 0){

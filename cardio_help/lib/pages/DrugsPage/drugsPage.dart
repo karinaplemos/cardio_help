@@ -6,6 +6,7 @@ import 'package:cardio_help/pages/DrugsPage/Tabs/ClassificationTab.dart';
 import 'package:cardio_help/pages/DrugsPage/Tabs/AdverseReactionTab.dart';
 import 'package:cardio_help/pages/DrugsPage/Tabs/TherapeuticUse.dart';
 import 'package:cardio_help/theme/theme.dart' as theme;
+import 'package:cardio_help/objects/navigation_model.dart';
 
 class DrugsPage extends StatefulWidget {
   final Map drug;
@@ -47,24 +48,31 @@ class _DrugsPageState extends State<DrugsPage> {
           title: Text(widget.drug["name"]),
         ),
         body: GridView.count(
-        crossAxisCount: 2,
-        padding: const EdgeInsets.all(20),
-        crossAxisSpacing: 15,
-        mainAxisSpacing: 15,
-        children: List.generate(topicos.length, (currentSelectedIndex) {
-            return RaisedButton(
-              onPressed: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => tabs[currentSelectedIndex],
-                      )
+          crossAxisCount: 2,
+          padding: const EdgeInsets.all(20),
+          crossAxisSpacing: 15,
+          mainAxisSpacing: 15,
+          children: List.generate(topicos.length, (currentSelectedIndex) {
+              return RaisedButton(
+                onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => tabs[currentSelectedIndex],
+                        )
+                    );
+                },
+                padding: const EdgeInsets.all(8),
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Icon(itens[currentSelectedIndex].icon, size: 60),
+                      Text(itens[currentSelectedIndex].title, textAlign: theme.centerAlign),
+                    ]
+                  ),
+                color: Colors.teal[100],
                   );
-              },
-              padding: const EdgeInsets.all(8),
-              child: Text(topicos[currentSelectedIndex]),
-              color: Colors.teal[100],
-                );
-          }),
+            }
+          ),
         ),
 /*        )
          GridView.count(

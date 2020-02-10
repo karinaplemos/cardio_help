@@ -18,7 +18,7 @@ class _CareTabState extends State<CareTab>{
         title: Text(widget.drug["name"]),
       ),
       body:ListView.builder(
-        padding: theme.left80,                 // Espaço necessário por causa das abas verticais
+        padding: theme.padding,                
         itemCount: (widget.drug["care"].length + 1), // Acrescento +1 por causa do título
         itemBuilder: (context, index){
           if(index == 0){

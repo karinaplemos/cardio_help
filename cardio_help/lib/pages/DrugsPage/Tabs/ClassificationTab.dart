@@ -17,7 +17,7 @@ class _ClassificationTabState extends State<ClassificationTab>{
         title: Text(widget.drug["name"]),
       ),
       body:Container(
-      padding: theme.left80,
+      padding: theme.padding,
       child:ListView(
         children: <Widget>[
           Container(

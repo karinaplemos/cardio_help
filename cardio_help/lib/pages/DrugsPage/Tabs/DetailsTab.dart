@@ -50,7 +50,7 @@ class _DetailsTabState extends State<DetailsTab> {
         title: Text(widget.drug["name"]),
       ),
       body:ListView(
-        padding: theme.left80,
+        padding: theme.padding,
         children: <Widget>[
           Container(
             padding: theme.titleSpacing,

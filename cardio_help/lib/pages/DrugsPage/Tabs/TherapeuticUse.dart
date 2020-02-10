@@ -18,7 +18,7 @@ class _TherapeuticUseTabState extends State<TherapeuticUseTab>{
           title: Text(widget.drug["name"]),
         ),
         body: ListView(
-        padding: theme.left80,
+        padding: theme.padding,
         children: <Widget>[
           Container(
             padding: theme.titleSpacing,
