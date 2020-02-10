@@ -23,7 +23,6 @@ class DrugsPage extends StatefulWidget {
 }
 
 class _DrugsPageState extends State<DrugsPage> {
-  List topicos = ['Classificação/Efeitos','Uso Terapêutico','Eventos Adversos', 'Detalhes', 'Interação Medicamentosa','Cuidados'];
   List tabs; 
 
   @override
@@ -52,7 +51,7 @@ class _DrugsPageState extends State<DrugsPage> {
           padding: const EdgeInsets.all(20),
           crossAxisSpacing: 15,
           mainAxisSpacing: 15,
-          children: List.generate(topicos.length, (currentSelectedIndex) {
+          children: List.generate(itens.length, (currentSelectedIndex) {
               return RaisedButton(
                 onPressed: () {
                     Navigator.of(context).push(
@@ -66,7 +65,7 @@ class _DrugsPageState extends State<DrugsPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Icon(itens[currentSelectedIndex].icon, size: 60),
-                      Text(itens[currentSelectedIndex].title, textAlign: theme.centerAlign),
+                      Text(itens[currentSelectedIndex].title, style: theme.textButtonStyle, textAlign: theme.centerAlign),
                     ]
                   ),
                 color: Colors.teal[100],
