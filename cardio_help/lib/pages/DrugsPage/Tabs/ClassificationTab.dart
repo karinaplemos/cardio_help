@@ -12,6 +12,10 @@ class _ClassificationTabState extends State<ClassificationTab>{
   @override
   Widget build(BuildContext context) {
       return Scaffold(
+      appBar: AppBar(
+        backgroundColor: theme.backgroundColor,
+        title: Text(widget.drug["name"]),
+      ),
       body:Container(
       padding: theme.left80,
       child:ListView(

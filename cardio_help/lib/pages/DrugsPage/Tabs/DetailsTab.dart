@@ -45,19 +45,23 @@ class _DetailsTabState extends State<DetailsTab> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    body:ListView(
-      padding: theme.left80,
-      children: <Widget>[
-        Container(
-          padding: theme.titleSpacing,
-          child: Text("Detalhes",
-              style: theme.titleStyle, textAlign: theme.justifyAlign),
-        ),
-        this._generateSubItems("Indicação", widget.drug["indication"]),
-        this._generateSubItems("Via de Administração", widget.drug["routeAdm"]),
-        this._generateSubItems("Apresentação", widget.drug["presentation"]),
-        this._generateSubItems("Diluição", widget.drug["dilution"]),
-      ],
+      appBar: AppBar(
+        backgroundColor: theme.backgroundColor,
+        title: Text(widget.drug["name"]),
+      ),
+      body:ListView(
+        padding: theme.left80,
+        children: <Widget>[
+          Container(
+            padding: theme.titleSpacing,
+            child: Text("Detalhes",
+                style: theme.titleStyle, textAlign: theme.justifyAlign),
+          ),
+          this._generateSubItems("Indicação", widget.drug["indication"]),
+          this._generateSubItems("Via de Administração", widget.drug["routeAdm"]),
+          this._generateSubItems("Apresentação", widget.drug["presentation"]),
+          this._generateSubItems("Diluição", widget.drug["dilution"]),
+        ],
       ),
     );
   }

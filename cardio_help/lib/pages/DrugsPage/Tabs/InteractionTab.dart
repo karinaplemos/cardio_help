@@ -14,6 +14,10 @@ class _InteractionTabState extends State<InteractionTab>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: theme.backgroundColor,
+        title: Text(widget.drug["name"]),
+      ),
       body:
           ListView.builder(
             padding: theme.left80,

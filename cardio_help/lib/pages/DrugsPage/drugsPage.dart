@@ -5,14 +5,15 @@ import 'package:cardio_help/pages/DrugsPage/Tabs/InteractionTab.dart';
 import 'package:cardio_help/pages/DrugsPage/Tabs/ClassificationTab.dart';
 import 'package:cardio_help/pages/DrugsPage/Tabs/AdverseReactionTab.dart';
 import 'package:cardio_help/pages/DrugsPage/Tabs/TherapeuticUse.dart';
+import 'package:cardio_help/theme/theme.dart' as theme;
 
 class DrugsPage extends StatefulWidget {
-  final Map medicamento;
+  final Map drug;
 
   const DrugsPage(
     { 
       Key key,
-      @required this.medicamento
+      @required this.drug
     }
   ): super(key: key); 
 
@@ -27,12 +28,12 @@ class _DrugsPageState extends State<DrugsPage> {
   @override
   void initState() {
     this.tabs = [
-      ClassificationTab(drug: widget.medicamento,),    //Classificação/Efeitos
-      TherapeuticUseTab(drug: widget.medicamento,),    //Uso Terapêutico
-      AdverseReactionTab(drug: widget.medicamento,),   //Evento Adverso
-      DetailsTab(drug: widget.medicamento,),           //Detalhes
-      InteractionTab(drug: widget.medicamento,),       //Interação
-      CareTab(drug: widget.medicamento,),              //Cuidados
+      ClassificationTab(drug: widget.drug,),    //Classificação/Efeitos
+      TherapeuticUseTab(drug: widget.drug,),    //Uso Terapêutico
+      AdverseReactionTab(drug: widget.drug,),   //Evento Adverso
+      DetailsTab(drug: widget.drug,),           //Detalhes
+      InteractionTab(drug: widget.drug,),       //Interação
+      CareTab(drug: widget.drug,),              //Cuidados
   ];
 
   super.initState();
@@ -42,8 +43,8 @@ class _DrugsPageState extends State<DrugsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
-          title: Text(widget.medicamento["name"]),
+          backgroundColor: theme.backgroundColor,
+          title: Text(widget.drug["name"]),
         ),
         body: GridView.count(
         crossAxisCount: 2,

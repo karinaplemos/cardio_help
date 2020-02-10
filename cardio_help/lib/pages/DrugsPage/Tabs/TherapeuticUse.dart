@@ -13,6 +13,10 @@ class _TherapeuticUseTabState extends State<TherapeuticUseTab>{
   Widget build(BuildContext context) {
     return 
       Scaffold(
+        appBar: AppBar(
+          backgroundColor: theme.backgroundColor,
+          title: Text(widget.drug["name"]),
+        ),
         body: ListView(
         padding: theme.left80,
         children: <Widget>[
