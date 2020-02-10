@@ -14,7 +14,7 @@ class _DrugListTabState extends State<DrugListTab>{
   @override
   Widget build(BuildContext context) {
     return (widget.drugs != null)? // Enquanto a lista de drug for diferente de nulo
-            ListView.builder( //Gerador de itens da lista
+            ListView.separated( //Gerador de itens da lista
               itemBuilder: (context, index) => ListTile(
                 title: Text(widget.drugs[index]["name"]),
                 trailing: Icon(Icons.keyboard_arrow_right),
@@ -28,6 +28,10 @@ class _DrugListTabState extends State<DrugListTab>{
                       )
                   );
                 },
+              ),
+              separatorBuilder: (context, index) => Divider(
+                color: Colors.grey,
+                height: 0.5,
               ),
               itemCount: widget.drugs.length,
             ): Center(

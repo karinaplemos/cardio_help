@@ -36,6 +36,9 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: theme.backgroundColor,
           title: Text('Cardio Help'),
           bottom: TabBar(
+            labelColor: theme.selectedColor,
+            unselectedLabelColor: Colors.white70,
+            indicatorColor: theme.selectedColor,
             tabs: [
               Tab(text: 'MEDICAMENTOS'),
               Tab(text: 'INFORMAÇÕES'),
