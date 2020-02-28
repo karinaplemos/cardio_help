@@ -2,7 +2,7 @@ import 'package:cardio_help/pages/HomePage/Tabs/DrugListTab.dart';
 import 'package:cardio_help/pages/HomePage/Tabs/InfoTab.dart';
 import 'package:flutter/material.dart';
 import 'package:cardio_help/objects/database.dart'; 
-import 'package:cardio_help/pages/DrugsPage/drugsPage.dart';
+//import 'package:cardio_help/pages/DrugsPage/drugsPage.dart';
 import 'package:cardio_help/theme/theme.dart' as theme;
 
 class HomePage extends StatefulWidget {

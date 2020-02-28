@@ -47,112 +47,49 @@ class _DrugsPageState extends State<DrugsPage> {
           title: Text(widget.drug["name"]),
           centerTitle: true,
         ),
-        body: GridView.count(
-          crossAxisCount: 2,
-          padding: const EdgeInsets.all(20),
-          crossAxisSpacing: 15,
-          mainAxisSpacing: 15,
-          children: List.generate(itens.length, (currentSelectedIndex) {
-              return RaisedButton(
-                onPressed: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => tabs[currentSelectedIndex],
-                        )
-                    );
-                },
-                shape: RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(18.0),
-                        
+        body: Column(
+          children: <Widget>[
+            SizedBox( height: 10),
+            Visibility(
+              visible: (widget.drug["mav"]),
+              child: Text("Medicamento de Alta Vigilância", style: TextStyle(color: Colors.red, fontSize: 20, fontWeight: FontWeight.bold))
+            ),
+            Expanded(
+              child: GridView.count(
+                crossAxisCount: 2,
+                padding: const EdgeInsets.all(20),
+                crossAxisSpacing: 15,
+                mainAxisSpacing: 15,
+                children: List.generate(itens.length, (currentSelectedIndex) {
+                    return RaisedButton(
+                      onPressed: () {
+                          Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => tabs[currentSelectedIndex],
+                              )
+                          );
+                      },
+                      shape: RoundedRectangleBorder(
+                              borderRadius: new BorderRadius.circular(18.0),
+                              
+                      ),
+                      padding: const EdgeInsets.all(8),
+                      child: Flex(
+                          direction: Axis.vertical,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Icon(itens[currentSelectedIndex].icon, size: 50, color: itens[currentSelectedIndex].color),
+                            Text(itens[currentSelectedIndex].title, style: theme.textButtonStyle, textAlign: theme.centerAlign),
+                          ]
+                        ),
+                      color: Colors.teal[100],
+                        );
+                  }
                 ),
-                padding: const EdgeInsets.all(8),
-                child: Flex(
-                    direction: Axis.vertical,
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Icon(itens[currentSelectedIndex].icon, size: 50, color: itens[currentSelectedIndex].color),
-                      Text(itens[currentSelectedIndex].title, style: theme.textButtonStyle, textAlign: theme.centerAlign),
-                    ]
-                  ),
-                color: Colors.teal[100],
-                  );
-            }
-          ),
-        ),
-/*        )
-         GridView.count(
-            primary: false,
-            padding: const EdgeInsets.all(20),
-            crossAxisSpacing: 15,
-            mainAxisSpacing: 15,
-            crossAxisCount: 2,
-            children: <Widget>[
-                RaisedButton(
-                  onPressed: () {
-
-                  },
-                  padding: const EdgeInsets.all(8),
-                  child: const Text('Classificação/Efeitos'),
-                  color: Colors.teal[100],
-                ),
-                RaisedButton(
-                  onPressed: () {
-
-                  },
-                  padding: const EdgeInsets.all(8),
-                  child: const Text('Uso Terapêutico'),
-                  color: Colors.teal[200],
-                ),
-                RaisedButton(
-                  onPressed: () {
-
-                  },
-                  padding: const EdgeInsets.all(8),
-                  child: const Text('Eventos Adversos'),
-                  color: Colors.teal[300],
-                ),
-                RaisedButton(
-                  onPressed: () {
-
-                  },
-                  padding: const EdgeInsets.all(8),
-                  child: const Text('Detalhes'),
-                  color: Colors.teal[400],
-                ),
-                RaisedButton(
-                  onPressed: () {
-
-                  },
-                  padding: const EdgeInsets.all(8),
-                  child: const Text('Interação Medicamentosa'),
-                  color: Colors.teal[500],
-                ),
-                RaisedButton(
-                  onPressed: () {
-                    
-                  },
-                  padding: const EdgeInsets.all(8),
-                  child: const Text('Cuidados'),
-                  color: Colors.teal[600],
-                ),
-            ],
-      ), 
-      */
-
-        //        Text("Diluição"),
-        //        Text(widget.medicamento["dilution"]),
-        //        Text("Apresentação"),
-        //        Column(
-       //           children: List.generate(widget.medicamento["presentation"].length, (index){
-       //             return Text(widget.medicamento["presentation"][index].toString());
-       //           })
-       //         ),
-       //         Text("Rota de Administração"),
-        //        Column(
-       //           children: List.generate(widget.medicamento["routeAdm"].length, (index){
-         //           return Text(widget.medicamento["routeAdm"][index].toString() );
-                 // })
-            //    )          
+              )
+            )
+          ]
+        ),       
   );   
   }
 }

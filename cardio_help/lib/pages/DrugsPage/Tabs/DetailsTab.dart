@@ -41,6 +41,27 @@ class _DetailsTabState extends State<DetailsTab> {
                       style: theme.textStyle, textAlign: theme.justifyAlign)),
         ],
       );
+  DataRow _getDataRow(var routeAdmCell, var presetentionCell) {
+    return DataRow(
+      cells: <DataCell>[
+        DataCell(Text(routeAdmCell)),
+        DataCell(Text(presetentionCell)),
+      ],
+    );
+  }
+
+  Widget presentationTable(var presetention, var routeAdm){
+    return SingleChildScrollView(
+      child: DataTable(
+        columns: [
+          DataColumn(label: Text('Apresentação',style: theme.textStyle)),
+          DataColumn(label: Text('Via de Administração',style: theme.textStyle)),
+        ],
+        rows: List.generate(
+          routeAdm.length, (index) => _getDataRow(routeAdm[index], presetention[index]))
+      ),
+    );
+  } 
 
   @override
   Widget build(BuildContext context) {
@@ -59,8 +80,9 @@ class _DetailsTabState extends State<DetailsTab> {
                 style: theme.titleStyle, textAlign: theme.justifyAlign),
           ),
           this._generateSubItems("Indicação", widget.drug["indication"]),
-          this._generateSubItems("Via de Administração", widget.drug["routeAdm"]),
-          this._generateSubItems("Apresentação", widget.drug["presentation"]),
+          this.presentationTable(widget.drug["routeAdm"], widget.drug["presentation"]),
+          // this._generateSubItems("Via de Administração", widget.drug["routeAdm"]),
+          // this._generateSubItems("Apresentação", widget.drug["presentation"]),
           this._generateSubItems("Diluição", widget.drug["dilution"]),
         ],
       ),
