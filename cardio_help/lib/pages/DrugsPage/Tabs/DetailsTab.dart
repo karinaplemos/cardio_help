@@ -52,10 +52,11 @@ class _DetailsTabState extends State<DetailsTab> {
 
   Widget presentationTable(var presetention, var routeAdm){
     return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
       child: DataTable(
         columns: [
-          DataColumn(label: Text('Apresentação',style: theme.textStyle)),
-          DataColumn(label: Text('Via de Administração',style: theme.textStyle)),
+          DataColumn(label: Text('\u2022\' Apresentação',style: theme.textStyle)),
+          DataColumn(label: Text('\u2022\'Via de Administração',style: theme.textStyle)),
         ],
         rows: List.generate(
           routeAdm.length, (index) => _getDataRow(routeAdm[index], presetention[index]))
