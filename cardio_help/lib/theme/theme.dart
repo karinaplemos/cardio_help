@@ -10,14 +10,14 @@ final Color backgroundColor = Color(0xFF236E4B);
 final EdgeInsets padding = EdgeInsets.all(20);
 
 
-final TextStyle titleStyle    = TextStyle(fontSize: 28, fontWeight: FontWeight.bold);
-final TextStyle textStyle     = TextStyle(fontSize: 18);
-final TextStyle subtitleStyle = TextStyle(fontSize: 22, fontWeight: FontWeight.bold);
+final TextStyle titleStyle      = TextStyle(fontSize: 28, fontWeight: FontWeight.bold);
+final TextStyle textStyle       = TextStyle(fontSize: 18);
+final TextStyle subtitleStyle   = TextStyle(fontSize: 22, fontWeight: FontWeight.bold);
 final TextStyle textButtonStyle = TextStyle(fontSize: 14);
 
-final EdgeInsets titleSpacing = EdgeInsets.only(bottom: 15);
+final EdgeInsets titleSpacing    = EdgeInsets.only(bottom: 15);
 final EdgeInsets subtitleSpacing = EdgeInsets.only(left: 10);
-final EdgeInsets textSpacing = EdgeInsets.only(left: 16,top: 8, right: 5,bottom: 12);
+final EdgeInsets textSpacing     = EdgeInsets.only(left: 16,top: 8, right: 5,bottom: 12);
 
 final TextAlign justifyAlign = TextAlign.justify;
-final TextAlign centerAlign = TextAlign.center;
+final TextAlign centerAlign  = TextAlign.center;

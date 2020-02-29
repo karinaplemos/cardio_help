@@ -4,7 +4,7 @@
             "name": "Atenolol",
             "mav" : false,
             "presentation": ["Comprimidos de 25mg, 50mg e 100 mg"],
-            "dilution": "Triturado e diluído em 20 ml de água para administração em sonda nasoenteral",
+            "dilution": "Triturado e diluído em 20 mL de água para administração em sonda nasoenteral",
             "indication": ["Angina", "Hipertensão Arterial"],
             "routeAdm": ["Via oral ou nasoentérica"],
             "care":[
@@ -13,8 +13,8 @@
                 "Observar os sinais e sintomas gastrointestinais como náuseas e vômitos;",
                 "Avaliar nível de consciência em horários estabelecidos pela unidade, pois pode causar alteração do estado mental;",
                 "Orientar o paciente quanto aos efeitos da medicação e efeitos adversos;",
-                "Proceder a trituração do comprimido e diluição em 20 ml de água para administração em sonda nasoenteral;",
-                "Administrar de 05 a 20 ml de água filtrada antes e após a administração do medicamento pela sonda enteral."
+                "Proceder a trituração do comprimido e diluição em 20 mL de água para administração em sonda nasoenteral;",
+                "Administrar de 05 a 20 mL de água filtrada antes e após a administração do medicamento pela sonda enteral."
             ],
             
             "classification": "Os betabloqueadores podem ser diferenciados em três categorias de acordo com a seletividade. Os não seletivos, o qual o atenolol faz parte, bloqueiam tantos os receptores adrenérgicos β1, encontrados principalmente no miocárdio, quanto os β2, encontrados no músculo liso, nos pulmões, nos vasos sanguíneos e em outros órgãos. No sistema cardiovascular, eles inibem as respostas cronotrópicas, inotrópicas e vasoconstritoras à ação das catecolaminas epinefrina e norepinefrina nos receptores beta-adrenérgicos. Em consequência, apresentam efeitos periféricos mais acentuados como aumento da resistência arterial periférica (DANTAN e BRUTON, 2015).",
@@ -67,7 +67,7 @@
                 "Observar sinais de congestão a partir de edemas de mãos e pés e alteração da respiração e frequência cardíaca;",
                 "Atentar para tonturas e sonolência;",
                 "Observar sinais e sintomas como  cefaleia, sonolência, fadiga, tremor, mal-estar, alterações de humor, distúrbios visuais, reação alérgica, alopecia, palpitação, síncope e hipotensão, providenciando os cuidados pertinentes;",
-                "Proceder a trituração do comprimido  e diluição em 20 ml de água para administração em sonda nasoenteral;",
+                "Proceder a trituração do comprimido  e diluição em 20 mL de água para administração em sonda nasoenteral;",
                 "Orientar o paciente quanto aos efeitos colaterais da medicação."
             ],
             "classification": "É um bloqueador dos canais de cálcio, com classificação  em derivados dihidropiridínicos e não-dihidropiridínicos. A heterogeneidade estrutural levou à heterogeneidade funcional, principalmente em relação à potência vasodilatadora e efeitos inotrópico, cronotrópico e dromotrópico no coração. Tem curta duração e provoca ativação neuro-hormonal reflexa do sistema nervoso simpático, caracterizada por taquicardia, aumento do débito cardíaco e aumento da concentração plasmática de catecolaminas e da atividade plasmática da renina (NIGRO e FORTES, 2005).",
@@ -82,7 +82,7 @@
             "name": "Captopril",
             "mav": false,
             "presentation": ["Comprimidos de 12,5mg/25mg/50mg"],
-            "dilution": "Triturado e diluído em 20 ml de água para administração em sonda nasoenteral",
+            "dilution": "Triturado e diluído em 20 mL de água para administração em sonda nasoenteral",
             "indication": ["Hipertensão Arterial", "Adjuvante para IC"],
             "routeAdm": ["Via Oral ou entérica. O alimento pode interferir na absorção do medimento e aumenta o risco de obstrução da SNE (NETO, et al 2016)"],
             "care":[
@@ -93,7 +93,7 @@
                 "Monitorizar a frequência cardíaca, risco de arritmias por conta da hiperpotassemia;",
                 "Atentar para os protocolos institucionais de dor torácica;",
                 "Observar sinais de hipoglicemia, principalmente quando o paciente faz uso de insulina;",
-                "Administrar de 05 a 20 ml de água filtrada antes e após a administração do medicamento por sonda enteral."
+                "Administrar de 05 a 20 mL de água filtrada antes e após a administração do medicamento por sonda enteral."
             ],
             "classification": "Os inibidores da enzima conversora de angiotensina (ECA) impedem a conversão de angiotensina I em angiotensina II, que é um vasoconstritor potente, atenuando assim seus efeitos. A inibição ECA diminui a resistência vascular sistêmica e as pressões arteriais média, diastólica e sistólica. Os inibidores da ECA provocam dilatação arteriolar sistêmica e aumentam a complacência das artérias de grande calibre, contribuindo para uma redução da pressão sistólica (CHAVES, 2015) e (DANDAN e BRUNTON, 2015).",
             "adverseReaction": "Incluem-se a hipotensão; tosse (5 a 20% dos pacientes, os inibidores da ECA induzem tosse seca incômoda mediada pelo acúmulo de bradicinina); Hiperpotassemia (os inibidores da ECA podem causar hiperpotassemia pacientes com insuficiência renal ou diabetes, bem como naqueles em uso de diuréticos poupadores de potássio; insuficiência renal aguda (a inibição da ECA pode induzir insuficiência renal aguda em pacientes com estenose bilateral da artéria renal, estenose da artéria em um único remanescente, insuficiência cardíaca ou depressão de volume devido à diarreia ou diuréticos) (DANDAN e BRUNTON, 2015).", 
@@ -113,8 +113,8 @@
             "care":[
                 "Monitorizar a pressão arterial",
                 "Observar sinais de hipotensão , arritmia, sonolência, vertigem, sedação, depressão do SNC, constipação intestinal, xerostomia, falta de apetite",
-                "Administrar o comprimido por via nasoentérica após triturá-lo e diluí-lo em 20 ml de água filtrada",
-                "Administrar de 05 a 20 ml de água filtrada antes e após a administração do medicamento por sonda enteral",
+                "Administrar o comprimido por via nasoentérica após triturá-lo e diluí-lo em 20 mL de água filtrada",
+                "Administrar de 05 a 20 mL de água filtrada antes e após a administração do medicamento por sonda enteral",
                 "Aplicar por via intramuscular profunda",
                 "As vias peridural e intratecal para administração do referido medicamento é uma prática exclusiva do médico no Brasil"
             ],
@@ -156,7 +156,7 @@
             "name": "Losartana Potássica",
             "mav": false,
             "presentation": ["Comprimidos 25 mg, 50 mg e 100 mg"],
-            "dilution": "Triturado e diluído em 20 ml de água para administração em sonda nasoenteral",
+            "dilution": "Triturado e diluído em 20 mL de água para administração em sonda nasoenteral",
             "indication": ["Hipertensão Arterial"],
             "routeAdm": ["Via oral ou nasoentérica"],
             "care":[
