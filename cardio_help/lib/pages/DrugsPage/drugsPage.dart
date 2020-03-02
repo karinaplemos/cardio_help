@@ -52,7 +52,7 @@ class _DrugsPageState extends State<DrugsPage> {
             SizedBox( height: 10),
             Visibility(
               visible: (widget.drug["mav"]),
-              child: Text("Medicamento de Alta Vigilância", style: TextStyle(color: Colors.red, fontSize: 20, fontWeight: FontWeight.bold))
+              child: Text("MAV - Medicamento de Alta Vigilância", style: TextStyle(color: Colors.red, fontSize: 18, fontWeight: FontWeight.bold))
             ),
             Expanded(
               child: GridView.count(

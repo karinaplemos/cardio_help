@@ -35,6 +35,12 @@ class _AdverseReactionTabState extends State<AdverseReactionTab>{
         ],
       )
     ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.green,
+         child: SizedBox(
+          height: 10,
+        ),
+      )
     );
   } 
 

@@ -41,7 +41,15 @@ class _CareTabState extends State<CareTab>{
               );
           }
         },
-      ));
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.green,
+         child: SizedBox(
+          height: 10,
+        ),
+      )
+
+    );
   }
 }
 

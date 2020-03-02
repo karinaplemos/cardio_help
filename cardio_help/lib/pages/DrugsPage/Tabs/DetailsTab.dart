@@ -67,15 +67,9 @@ class _DetailsTabState extends State<DetailsTab> {
       ),
       bottomNavigationBar: BottomAppBar(
         color: Colors.green,
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Text("Fonte: "),
-            Text(widget.drug["reference"].toString(),style: theme.textStyle, textAlign: theme.justifyAlign)
-          ]
-        )),
+         child: SizedBox(
+          height: 10,
+        ),
       )
     );
   }

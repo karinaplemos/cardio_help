@@ -56,7 +56,14 @@ class _InteractionTabState extends State<InteractionTab>{
                 );
               }         
             },
-          ));
+          ),
+          bottomNavigationBar: BottomAppBar(
+            color: Colors.green,
+             child: SizedBox(
+              height: 10,
+            ),
+          )
+          );
         
     
   }

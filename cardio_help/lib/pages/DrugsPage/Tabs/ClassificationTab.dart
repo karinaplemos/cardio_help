@@ -35,8 +35,14 @@ class _ClassificationTabState extends State<ClassificationTab>{
           
           
           ],
+      	)
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.green,
+         child: SizedBox(
+          height: 10,
+        ),
       )
-    ),
     );
   } 
 

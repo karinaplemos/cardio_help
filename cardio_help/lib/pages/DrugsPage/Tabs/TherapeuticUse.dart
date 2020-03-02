@@ -33,6 +33,12 @@ class _TherapeuticUseTabState extends State<TherapeuticUseTab>{
             style: theme.textStyle, textAlign: theme.justifyAlign)
           )
         ]),
+        bottomNavigationBar: BottomAppBar(
+        color: Colors.green,
+         child: SizedBox(
+          height: 10,
+        ),
+      )
       );
   } 
 
